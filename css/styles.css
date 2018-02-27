@@ -20,11 +20,6 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
-audio,
-canvas,
-iframe,
-img,
-svg,
 video {
   vertical-align: middle; }
 
@@ -43,8 +38,8 @@ textarea {
   padding: 0.2em 0; }
 
 /* ==========================================================================
-   General configuration styles
-   ========================================================================== */
+ * General configuration styles
+ * ========================================================================== */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -94,11 +89,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block; }
 
 /* ==========================================================================
-   Media Queries
-   ========================================================================== */
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
+ * Helper classes
+ * ========================================================================== */
 .hidden {
   display: none !important;
   visibility: hidden; }
@@ -136,55 +128,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .clearfix {
   *zoom: 1; }
 
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-@media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important; }
+#draggable {
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px 10px 10px 0; }
 
-  a,
-  a:visited {
-    text-decoration: underline; }
-
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: ""; }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-
-  thead {
-    display: table-header-group; }
-
-  tr,
-  img {
-    page-break-inside: avoid; }
-
-  img {
-    max-width: 100% !important; }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-
-  h2,
-  h3 {
-    page-break-after: avoid; } }
+#droppable {
+  width: 150px;
+  height: 150px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px; }
 
 /*# sourceMappingURL=styles.css.map */
