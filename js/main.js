@@ -15,6 +15,21 @@ isFirstTime = localStorage.getItem('is_first_time');
   }
 })();
 
+// Function: Traductor
+var input_word = $('.castellano');
+var output_word = $('.resultado');
+var searching_string = '';
+// Function: To fire the function while the user is writting
+input_word.on('keyup', function (ev) {
+  searching_string = $(this).val();
+  if(searching_string == '') { output_word.text(''); }
+  output_word.text('');
+  for (var i = 0; i < mayanWords.length; i++) {
+    if (searching_string == mayanWords[i].spanish) {
+      output_word.text(mayanWords[i].mayan);
+    }
+  }
+});
 
 // Function: Drag & Drop jQuery
 $( function() {
