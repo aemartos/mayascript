@@ -1,16 +1,55 @@
+html
+	box-sizing: border-box
+
+body
+	background-color: #191005
+	width: 100vw
+	height: 100vh
+	color: #ffffff
+	font-family: 'Roboto', sans-serif
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+header
+	background-color: #ed4747
+	width: 100%
+	display: flex
+
+	div
+		color: black
+		width: calc(100% / 6)
+		text-align: center
+		padding: 1.3em
+main
+	width: 100%
+	flex: 1 0 auto
+	.main_content
+		width: 100%
+		.main_content_info
+			background-color: brown
+			width: 80%
+	.sidebar_content
+		width: 0%
+		display: none
+footer
+	background-color: #dba94c
+	display: flex
+	flex-shrink: 0
+	.footer_content
+		width: 100%
+		padding: 1.3em
+
+
 #draggable
-	width: 100px 
+	width: 100px
 	height: 100px
 	padding: 0.5em
 	float: left
 	margin: 10px 10px 10px 0
 
-#droppable 
+#droppable
 	width: 150px
 	height: 150px
 	padding: 0.5em
 	float: left
 	margin: 10px
-
-
-

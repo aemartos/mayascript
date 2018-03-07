@@ -1,6 +1,7 @@
 // Variables
 var isFirstTime;
 var mayanWords = [];
+var spanish_to_mayan = true;
 
 isFirstTime = localStorage.getItem('is_first_time');
 // Function: Get data from localstorage
@@ -25,10 +26,33 @@ input_word.on('keyup', function (ev) {
   if(searching_string == '') { output_word.text(''); }
   output_word.text('');
   for (var i = 0; i < mayanWords.length; i++) {
-    if (searching_string == mayanWords[i].spanish) {
-      output_word.text(mayanWords[i].mayan);
+    if(spanish_to_mayan) {
+      if (searching_string == mayanWords[i].spanish) {
+        output_word.text(mayanWords[i].mayan);
+      }
+    } else {
+      if (searching_string == mayanWords[i].mayan) {
+        console.log(mayanWords[i].mayan);
+        output_word.text(mayanWords[i].spanish);
+      }
     }
   }
+});
+
+// Function: On click language button
+var exchange_button = $('.exchange');
+var language_from_label = $('.language_from_label');
+var language_to_label = $('.language_to_label');
+exchange_button.on('click', function(ev) {
+  var from_value = language_from_label.text();
+  var to_value = language_to_label.text();
+  var resultado_value = output_word.text();
+  language_from_label.text(to_value);
+  language_to_label.text(from_value);
+  input_word.val(resultado_value);
+  output_word.text('');
+  spanish_to_mayan = !spanish_to_mayan;
+  input_word.keyup();
 });
 
 // Function: Drag & Drop jQuery

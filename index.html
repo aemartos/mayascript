@@ -9,29 +9,66 @@
 
         <link rel="shortcut icon" href="" type="image/x-icon">
         <link rel="icon" href="" type="image/x-icon">
-
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/font-awesome.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+        <header>
+          <div class="menu_logo">
 
+          </div>
+          <div class="menu_opt1">
+            <p>Descifrar</p>
+          </div>
+          <div class="menu_opt2">
+            <p>Construir</p>
+          </div>
+          <div class="menu_opt3">
+            <p>Investigar</p>
+          </div>
+          <div class="menu_opt4">
+            <p>Indigenizar</p>
+          </div>
+          <div class="menu_language">
+            <p>ESP <span class="fa fa-caret-down"></span> </p>
+          </div>
+        </header>
+        <main>
+          <div class="main_content">
+            <div class="main_content_header">
+              <p>Bienvenido a la plataforma</p>
+              <h1>Maya_Script</h1>
+            </div>
+            <div class="main_content_info">
 
-        <div id="draggable" class="ui-widget-content">
-          <p>Drag me to my target</p>
-        </div>
+            </div>
+          </div>
+          <div class="sidebar_content">
+            <div id="draggable" class="ui-widget-content">
+              <p>Drag me to my target</p>
+            </div>
 
-        <div id="droppable" class="ui-widget-header">
-          <p>Drop here</p>
-        </div>
+            <div id="droppable" class="ui-widget-header">
+              <p>Drop here</p>
+            </div>
 
-        <input class="castellano" type="text" name="Palabra" value="">
-        <p class="resultado"></p>
+            <label class="language_from_label" for="castellano">Castellano</label>
+            <input class="castellano" type="text" name="Palabra" value="">
+            <label class="language_to_label" for="maya">Maya</label>
+            <p class="resultado"></p>
+            <button class="exchange" type="button" name="button">Change</button>
+          </div>
 
-
+        </main>
+        <footer>
+          <div class="footer_content">
+            <p>Copyright</p>
+          </div>
+        </footer>
 
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/vendor/jquery-ui.min.js"></script>
