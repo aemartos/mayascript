@@ -28,8 +28,13 @@ input_word.on('keyup', function (ev) {
   if(searching_string == '') { output_word.text(''); }
   output_word.text('');
   for (var i = 0; i < mayanWords.length; i++) {
-      if (searching_string == mayanWords[i].spanish) {
-        output_word.text(mayanWords[i].mayan);
+      if (searching_string == mayanWords[i].spanish && searching_string != '') {
+        if(mayanWords[i].mayan.includes(',')) {
+          output_word.text(mayanWords[i].mayan.split(',')[0]);
+        } else {
+          output_word.text(mayanWords[i].mayan);
+        }
+        //output_word.text(mayanWords[i].mayan);
       }
   }
 });
