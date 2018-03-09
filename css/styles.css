@@ -1,19 +1,13 @@
-.tipo_prueba_chachi {
-  font-family: "mayascript";
-  font-size: 8em;
-  font-kerning: normal; }
-
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100%; }
 
 body {
   background-color: #191005;
-  max-height: 100vh;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+  max-width: 100vw;
   flex-wrap: wrap; }
 
 header {
@@ -36,13 +30,12 @@ header {
     color: black; }
 
 main {
-  width: calc(100% - 240px);
+  width: 100%;
   padding: 0 120px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex: 1;
-  position: relative; }
+  overflow: auto; }
   main .main_content {
     width: 100%;
     display: flex;
@@ -104,7 +97,7 @@ main {
       width: 100%;
       height: 30%;
       border: 1px solid white;
-      margin-top: 20px !important; }
+      margin-top: 30px !important; }
     main .sidebar_content .syllabic {
       width: 100%; }
     main .sidebar_content .meaning {
@@ -176,10 +169,12 @@ footer {
   background-color: #dba94c;
   color: black;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   height: 50px;
   display: flex;
   margin-top: 20px;
-  flex-shrink: 0;
   font-size: 12px; }
   footer .footer_content {
     display: flex;
