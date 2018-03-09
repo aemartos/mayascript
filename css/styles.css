@@ -1,3 +1,7 @@
+.tipo_prueba_chachi {
+  font-family: "mayascript";
+  font-size: 2em; }
+
 html {
   box-sizing: border-box; }
 
@@ -200,5 +204,11 @@ footer {
   padding: 0.5em;
   float: left;
   margin: 10px; }
+
+@font-face {
+  font-family: "mayascript";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/mayascript/MayaFont-Regular.eot"), url("../fonts/mayascript/MayaFont-Regular.otf") format("opentype"), url("../fonts/mayascript/MayaFont-Regular.woff2") format("woff2"), url("../fonts/mayascript/MayaFont-Regular.woff") format("woff"), url("../fonts/mayascript/MayaFont-Regular.ttf") format("truetype"); }
 
 /*# sourceMappingURL=styles.css.map */
