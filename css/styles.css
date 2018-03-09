@@ -1,6 +1,7 @@
 .tipo_prueba_chachi {
   font-family: "mayascript";
-  font-size: 2em; }
+  font-size: 8em;
+  font-kerning: normal; }
 
 html {
   box-sizing: border-box; }
