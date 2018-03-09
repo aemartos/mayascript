@@ -55,6 +55,60 @@ exchange_button.on('click', function(ev) {
   input_word.keyup();
 });
 
+// Function: Show/hide the sidebar onclick
+var dropdown = $(".dropdown");
+var sidebar = $(".sidebar_content");
+var span_angel_left = $("span.fa.fa-angle-left")
+var main_content = $(".main_content");
+dropdown.on('click', function(ev) {
+  main_content.toggleClass('with_sidebar');
+  sidebar.toggleClass('invisible_sidebar');
+  span_angel_left.toggleClass('with_sidebar');
+})
+
+// Function: Adding code to header
+var header = $("header");
+var menu_logo = $("<div class='menu_logo'></div>");
+var menu_opt1 = $("<div class='menu_opt1'></div>");
+var menu_op1_text = $("<p><a href='index.html'>Descifrar</a></p>");
+var menu_opt2 = $("<div class='menu_opt2'></div>");
+var menu_opt2_text = $("<p>Construir</p>");
+var menu_opt3 = $("<div class='menu_opt3'></div>");
+var menu_opt3_text = $("<p><a href='translator.html'>Investigar</a></p>");
+var menu_opt4 = $("<div class='menu_opt4'></div>");
+var menu_opt4_text = $("<p>Indigenizar</p>");
+var menu_language = $("<div class='menu_language'></div>");
+var menu_language_opts = $("<p>ESP <span class='fa fa-caret-down'></span> </p>");
+
+header.append(menu_logo);
+header.append(menu_opt1);
+menu_opt1.append(menu_op1_text);
+header.append(menu_opt2);
+menu_opt2.append(menu_opt2_text);
+header.append(menu_opt3);
+menu_opt3.append(menu_opt3_text);
+header.append(menu_opt4);
+menu_opt4.append(menu_opt4_text);
+header.append(menu_language);
+menu_language.append(menu_language_opts);
+
+
+// Function: Adding code to footer
+var footer = $('footer');
+var footer_content = $("<div class='footer_content'></div>");
+var copyright = $("<div class='copyright'></div>");
+var copyright_text = $("<p>Copyright</p>");
+var social_media = $("<div class='social_media'></div>");
+var american_museum = $("<div class='american_museum'></div>");
+var logo_am = $("<img src='img/museoamerica.png' width='128px' height='23px' alt='logo museo america'>");
+
+footer.append(footer_content);
+footer_content.append(copyright);
+copyright.append(copyright_text);
+footer_content.append(social_media);
+footer_content.append(american_museum);
+american_museum.append(logo_am);
+
 // Function: Drag & Drop jQuery
 $( function() {
     $( "#draggable" ).draggable();
