@@ -22,7 +22,6 @@ var output_word = $('.resultado');
 
 var searching_string = '';
 // Function: To fire the function while the user is writting
-console.log(mayanWords.length);
 input_word.on('keyup', function (ev) {
   searching_string = $(this).val().toLowerCase();
   if(searching_string == '') { output_word.text(''); }
@@ -34,7 +33,6 @@ input_word.on('keyup', function (ev) {
         } else {
           output_word.text(mayanWords[i].mayan);
         }
-        //output_word.text(mayanWords[i].mayan);
       }
   }
 });
@@ -76,7 +74,7 @@ var menu_opt2_text = $("<p><a href='game.html'>Construir</a></p>");
 var menu_opt3 = $("<div class='menu_opt3'></div>");
 var menu_opt3_text = $("<p><a href='translator.html'>Investigar</a></p>");
 var menu_opt4 = $("<div class='menu_opt4'></div>");
-var menu_opt4_text = $("<p>Indigenizar</p>");
+var menu_opt4_text = $("<p><a href='typography.html'>Indigenizar</a></p>");
 var menu_language = $("<div class='menu_language'></div>");
 var menu_language_opts = $("<p>ESP <span class='fa fa-caret-down'></span> </p>");
 
