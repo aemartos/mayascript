@@ -88,7 +88,9 @@ main {
         main .main_content .main_content_info_typo .typo_textarea textarea, main .main_content .main_content_info_typo .typo_keyboard textarea {
           background-color: #b2aeab;
           color: black;
-          font-size: 40px;
+          font-family: "mayascript";
+          font-size: 80px;
+          padding: 0 30px;
           width: calc(100% - 86px);
           margin: 20px 40px;
           height: calc(100% - 40px); }
