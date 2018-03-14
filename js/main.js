@@ -119,3 +119,16 @@ $( function() {
       }
     });
   } );
+
+// Function lo select a glif from the codice
+var part = $('.main_content_info > div');
+var img_detail = $('.sidebar_content .image_detail');
+part.on('click', function(ev) {
+  //console.log($(this).css('background-image'));
+  img_detail.css('background-image', $(this).css('background-image'));
+  if(sidebar.hasClass('invisible_sidebar')) {
+    sidebar.toggleClass('invisible_sidebar');
+    main_content.toggleClass('with_sidebar');
+    span_angel_left.toggleClass('with_sidebar');
+  }
+})
