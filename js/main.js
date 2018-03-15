@@ -120,11 +120,23 @@ $( function() {
     });
   } );
 
-// Function lo select a glif from the codice
+
+
 var part = $('.main_content_info > div');
-var img_detail = $('.sidebar_content .image_detail');
+var img_path ,img_hover_name;
+var img_detail = $('main .sidebar_content .image_detail');
+part.hover(
+  function(ev) {
+    img_path = $(this).css("background-image").split('/');
+    $(this).css('background-image', 'url("./img/c'+ $(img_path).last()[0]);
+  },
+  function(ev) {
+    $(this).css('background-image', img_path.join('/'));
+  }
+);
+
+// Function lo select a glif from the codice
 part.on('click', function(ev) {
-  //console.log($(this).css('background-image'));
   img_detail.css('background-image', $(this).css('background-image'));
   if(sidebar.hasClass('invisible_sidebar')) {
     sidebar.toggleClass('invisible_sidebar');
