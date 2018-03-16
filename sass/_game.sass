@@ -11,8 +11,9 @@
 	.column
 		height: 100%
 		&.info_column
+			overflow-y: auto
 			max-width: 15%
-			padding: 4em 2em 0 7em
+			padding: 4em 0 0 7em
 			.column_introduction
 				margin-bottom: .3em
 			.column_main_title
@@ -38,66 +39,49 @@
 					font-weight: 200
 					margin-top: .3em
 
+		
 		&.game_column
-			max-width: 60%
-			margin-right: 3em
-			display: flex
-			flex-flow: column nowrap
-			align-items: center
-			justify-content: center
-			.main_box01
-				@include flex
-				width: 70vh
+			width: 60%
+			height: calc(100vh - 13.5em)
+			margin: 0 7vw
+			.game_main_box
+				//width: 100%
+				//height: 100%
+				display: grid
+				grid-template-columns: 8vw 24vw 8vw
+				grid-template-rows: 8vw 24vw 8vw
 				.box01
-					width: 20vh
 				.box02
-					width: 57vh
-					height: 13vh
 					border: 3px solid gray
 				.box03
-					width: 20vh
-			.main_box02
-				@include flex
-				width: 70vh
-				.box01
-					width: 20vh
-					height: 42vh
+				.box04
 					border: 3px solid gray
-				.box02
-					width: 60vh
-					height: 42vh
+				.box05
 					border: 3px solid #DBA94C
-				.box03
-					width: 20vh
-					height: 42vh
+				.box06
 					border: 3px solid gray
-			.main_box03
-				@include flex
-				width: 70vh
-				.box01
-					width: 20vh
-				.box02
-					width: 57vh
-					height: 13vh
+				.box07
+				.box08
 					border: 3px solid gray
-				.box03
-					width: 20vh
-
+				.box09
 
 
 		&.glyphs_column
+			z-index: 100
+			overflow-y: auto
 			max-width: 25%
 			display: flex
 			justify-content: space-between
 			background-color: #443a34 
 			.arrow
 				cursor: pointer
-				border-right: 1px solid black
+				//border-right: 1px solid black
 				color: black
 				display: flex
 				align-items: center
 				padding: .3em
 			.glyphs
+				border-left: 2px solid black
 				width: 100%
 				.minus
 					cursor: pointer
@@ -105,7 +89,8 @@
 					.principal_title
 						@include flex
 						justify-content: space-between
-						border: 1px solid black
+						border-top: 1px solid black
+						border-bottom: 1px solid black
 						color: black
 						font-weight: 500
 						font-size: .9em
@@ -126,7 +111,8 @@
 					.others_title
 						@include flex
 						justify-content: space-between
-						border: 1px solid black
+						border-top: 1px solid black
+						border-bottom: 1px solid black
 						color: black
 						font-weight: 500
 						font-size: .9em
@@ -151,7 +137,8 @@
 					.numbers_title
 						@include flex
 						justify-content: space-between
-						border: 1px solid black
+						border-top: 1px solid black
+						border-bottom: 1px solid black
 						color: black
 						font-weight: 500
 						font-size: .9em

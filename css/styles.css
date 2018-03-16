@@ -114,8 +114,10 @@ main {
           background-color: #b2aeab;
           color: black;
           font-family: "mayascript";
-          font-size: 80px;
-          padding: 0 30px;
+          font-kerning: normal;
+          outline: none;
+          font-size: 10em;
+          padding: 0 60px;
           width: calc(100% - 86px);
           margin: 20px 40px;
           height: calc(100% - 40px); }
@@ -297,8 +299,9 @@ footer {
   .game_content .column {
     height: 100%; }
     .game_content .column.info_column {
+      overflow-y: auto;
       max-width: 15%;
-      padding: 4em 2em 0 7em; }
+      padding: 4em 0 0 7em; }
       .game_content .column.info_column .column_introduction {
         margin-bottom: 0.3em; }
       .game_content .column.info_column .column_main_title {
@@ -325,68 +328,38 @@ footer {
         font-weight: 200;
         margin-top: 0.3em; }
     .game_content .column.game_column {
-      max-width: 60%;
-      margin-right: 3em;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      justify-content: center; }
-      .game_content .column.game_column .main_box01 {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        width: 70vh; }
-        .game_content .column.game_column .main_box01 .box01 {
-          width: 20vh; }
-        .game_content .column.game_column .main_box01 .box02 {
-          width: 57vh;
-          height: 13vh;
+      width: 60%;
+      height: calc(100vh - 13.5em);
+      margin: 0 7vw; }
+      .game_content .column.game_column .game_main_box {
+        display: grid;
+        grid-template-columns: 8vw 24vw 8vw;
+        grid-template-rows: 8vw 24vw 8vw; }
+        .game_content .column.game_column .game_main_box .box02 {
           border: 3px solid gray; }
-        .game_content .column.game_column .main_box01 .box03 {
-          width: 20vh; }
-      .game_content .column.game_column .main_box02 {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        width: 70vh; }
-        .game_content .column.game_column .main_box02 .box01 {
-          width: 20vh;
-          height: 42vh;
+        .game_content .column.game_column .game_main_box .box04 {
           border: 3px solid gray; }
-        .game_content .column.game_column .main_box02 .box02 {
-          width: 60vh;
-          height: 42vh;
+        .game_content .column.game_column .game_main_box .box05 {
           border: 3px solid #DBA94C; }
-        .game_content .column.game_column .main_box02 .box03 {
-          width: 20vh;
-          height: 42vh;
+        .game_content .column.game_column .game_main_box .box06 {
           border: 3px solid gray; }
-      .game_content .column.game_column .main_box03 {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        width: 70vh; }
-        .game_content .column.game_column .main_box03 .box01 {
-          width: 20vh; }
-        .game_content .column.game_column .main_box03 .box02 {
-          width: 57vh;
-          height: 13vh;
+        .game_content .column.game_column .game_main_box .box08 {
           border: 3px solid gray; }
-        .game_content .column.game_column .main_box03 .box03 {
-          width: 20vh; }
     .game_content .column.glyphs_column {
+      z-index: 100;
+      overflow-y: auto;
       max-width: 25%;
       display: flex;
       justify-content: space-between;
       background-color: #443a34; }
       .game_content .column.glyphs_column .arrow {
         cursor: pointer;
-        border-right: 1px solid black;
         color: black;
         display: flex;
         align-items: center;
         padding: 0.3em; }
       .game_content .column.glyphs_column .glyphs {
+        border-left: 2px solid black;
         width: 100%; }
         .game_content .column.glyphs_column .glyphs .minus {
           cursor: pointer; }
@@ -395,7 +368,8 @@ footer {
           flex-flow: row nowrap;
           align-items: center;
           justify-content: space-between;
-          border: 1px solid black;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
           color: black;
           font-weight: 500;
           font-size: 0.9em;
@@ -420,7 +394,8 @@ footer {
           flex-flow: row nowrap;
           align-items: center;
           justify-content: space-between;
-          border: 1px solid black;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
           color: black;
           font-weight: 500;
           font-size: 0.9em;
@@ -448,7 +423,8 @@ footer {
           flex-flow: row nowrap;
           align-items: center;
           justify-content: space-between;
-          border: 1px solid black;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
           color: black;
           font-weight: 500;
           font-size: 0.9em;
