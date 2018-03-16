@@ -109,8 +109,8 @@ american_museum.append(logo_am);
 
 // Function: Drag & Drop jQuery
 $( function() {
-    $( "#draggable" ).draggable();
-    $( "#droppable" ).droppable({
+    $( ".draggable" ).draggable();
+    $( ".droppable" ).droppable({
       drop: function( event, ui ) {
         $( this )
           .addClass( "ui-state-highlight" )

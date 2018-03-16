@@ -2,22 +2,189 @@
 
 
 
-#draggable
-	width: 100px
-	height: 100px
-	padding: 0.5em
-	float: left
-	margin: 10px 10px 10px 0
+.game_content
+	@include flex
+	justify-content: space-between
+	width: 100% 
+	transition: all 0.25s ease
+	height: calc(100vh - 6.5em)
+	.column
+		height: 100%
+		&.info_column
+			max-width: 15%
+			padding: 4em 2em 0 7em
+			.column_introduction
+				margin-bottom: .3em
+			.column_main_title
+				margin: 0
+				font-size: 2em
+				font-weight: 700
+			.column_description
+				font-weight: 100
+			.glyph_slide
+				.glyph_box
+					background-color: #443a34 
+					margin: 2em 0 .5em
+					height: 15em
+					width: 100%
+				.slide_arrows
+					@include flex
+					justify-content: space-around
+				.glyph_title
+					margin-top: 1em
+					font-size: 1.5em
+					font-weight: 300
+				.glyph_description
+					font-weight: 200
+					margin-top: .3em
 
-#droppable
-	width: 150px
-	height: 150px
-	padding: 0.5em
-	float: left
-	margin: 10px
+		&.game_column
+			max-width: 60%
+			margin-right: 3em
+			display: flex
+			flex-flow: column nowrap
+			align-items: center
+			justify-content: center
+			.main_box01
+				@include flex
+				width: 70vh
+				.box01
+					width: 20vh
+				.box02
+					width: 57vh
+					height: 13vh
+					border: 3px solid gray
+				.box03
+					width: 20vh
+			.main_box02
+				@include flex
+				width: 70vh
+				.box01
+					width: 20vh
+					height: 42vh
+					border: 3px solid gray
+				.box02
+					width: 60vh
+					height: 42vh
+					border: 3px solid #DBA94C
+				.box03
+					width: 20vh
+					height: 42vh
+					border: 3px solid gray
+			.main_box03
+				@include flex
+				width: 70vh
+				.box01
+					width: 20vh
+				.box02
+					width: 57vh
+					height: 13vh
+					border: 3px solid gray
+				.box03
+					width: 20vh
 
 
-.tipo_prueba_chachi
-	font-size: 8em
-	font-family: 'mayascript'
-	font-kerning: normal
+
+		&.glyphs_column
+			max-width: 25%
+			display: flex
+			justify-content: space-between
+			background-color: #443a34 
+			.arrow
+				cursor: pointer
+				border-right: 1px solid black
+				color: black
+				display: flex
+				align-items: center
+				padding: .3em
+			.glyphs
+				width: 100%
+				.minus
+					cursor: pointer
+				.principal_sign
+					.principal_title
+						@include flex
+						justify-content: space-between
+						border: 1px solid black
+						color: black
+						font-weight: 500
+						font-size: .9em
+						padding: .3em
+						background-color: #DBA94C
+					.principal_elements
+						padding: .4em
+						padding-right: 0
+						cursor: pointer
+						@include flex-wrap
+						justify-content: space-around
+						font-size: calc(5.3vh + 1em)
+						@include mayascript
+						line-height: 1em
+						.sign
+							padding-right: .3em
+				.other_signs
+					.others_title
+						@include flex
+						justify-content: space-between
+						border: 1px solid black
+						color: black
+						font-weight: 500
+						font-size: .9em
+						padding: .3em
+						background-color: #CE8546
+						.title_text
+							.light
+								font-size: .8em
+								font-weight: 300
+					.others_elements
+						padding: .4em
+						padding-right: 0
+						cursor: pointer
+						@include flex-wrap
+						justify-content: space-around
+						font-size: calc(5.3vh + 1em)
+						@include mayascript
+						line-height: 1em
+						.sign
+							padding-right: .3em
+				.numbers
+					.numbers_title
+						@include flex
+						justify-content: space-between
+						border: 1px solid black
+						color: black
+						font-weight: 500
+						font-size: .9em
+						padding: .3em
+						background-color: #E56871
+					.numbers_elements
+						padding: .4em
+						padding-right: 0
+						cursor: pointer
+						@include flex-wrap
+						justify-content: space-around
+						font-size: calc(3.5vh + 1em)
+						@include mayascript
+						.number
+
+
+
+@media (max-width: breakpoint-desktop)
+
+
+
+@media (max-width: breakpoint-tablet)
+
+
+
+@media (max-width: breakpoint-phone)
+
+
+
+@media (max-width: breakpoint-small)
+
+
+
+
+
+

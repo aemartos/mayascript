@@ -7,13 +7,14 @@ body
 	font-family: 'Roboto', sans-serif
 	display: flex
 	max-width: 100vw
-	height: 100vh
+	//height: 100vh
 	flex-wrap: wrap
 	flex-direction: column
 header
 	background-color: #ed4747
 	width: 100%
 	display: flex
+	z-index: 100
 	div[class*="menu_opt"]:hover
 		background-color: #af3434
 		cursor: pointer
@@ -45,6 +46,7 @@ main
 		padding-left: 60px
 	.main_content
 		width: 100%
+		height: calc(100vh - 6.5em)
 		display: flex
 		flex-wrap: nowrap
 		justify-content: space-between
@@ -54,6 +56,7 @@ main
 		.main_content_info
 			background-color: #443a34
 			width: calc(70% - 40px)
+			height: calc(100% - 10em)
 			display: grid
 			grid-gap: 20px
 			grid-template-columns: auto auto auto
@@ -131,7 +134,7 @@ main
 	.sidebar_content
 		background-color: #191005
 		width: 20%
-		height: 85%
+		height: calc(100vh - 2.5em)
 		display: flex
 		flex-wrap: wrap
 		justify-content: flex-start
@@ -216,12 +219,17 @@ main
 					font-size: 9px
 
 footer
+	z-index: 100
+	position: fixed
+	left: 0
+	bottom: 0
+	width: 100%
+	height: 3.5em
 	background-color: #dba94c
 	color: black
-	width: 100%
-	display: flex
-	margin-top: 20px
-	flex-shrink: 0
+	//display: flex
+	//margin-top: 20px
+	//flex-shrink: 0
 	font-size: 12px
 	&.typo
 		margin-top: 0px
@@ -238,12 +246,19 @@ footer
 
 
 
-@media (max-width: $breakpoint-small)
+@media (max-width: breakpoint-desktop)
+	main
+		padding: 0 40px
+
+
+@media (min-width: breakpoint-phone) and (max-width: breakpoint-tablet)
 	main
 		.main_translator_content
-			margin: 0
+			.translator_spanish, .translator_mayan
+				width: 45%
 
-@media (max-width: $breakpoint-phone)
+
+@media (max-width: breakpoint-phone)
 	main
 		padding: 0 40px
 		.main_translator_content
@@ -255,12 +270,12 @@ footer
 			p.description
 				display: none
 
-@media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet)
+
+@media (max-width: breakpoint-small)
 	main
 		.main_translator_content
-			.translator_spanish, .translator_mayan
-				width: 45%
+			margin: 0
 
-@media (max-width: $breakpoint-desktop)
-	main
-		padding: 0 40px
+
+
+
