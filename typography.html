@@ -31,69 +31,91 @@
         </div>
         <div class="main_content_info_typo">
           <div class="typo_textarea">
-            <textarea name="text"></textarea>
+            <textarea id="keyboardtarget" name="text"></textarea>
           </div>
           <div class="typo_open_close">
             <span class="fa fa-2x fa-angle-down"></span>
           </div>
-          <div class="typo_keyboard">
-            <ul id="keyboard">
-              <li class="symbol"><span class="off">`</span><span class="on">~</span></li>
-              <li class="symbol"><span class="off">1</span><span class="on">!</span></li>
-              <li class="symbol"><span class="off">2</span><span class="on">@</span></li>
-              <li class="symbol"><span class="off">3</span><span class="on">#</span></li>
-              <li class="symbol"><span class="off">4</span><span class="on">$</span></li>
-              <li class="symbol"><span class="off">5</span><span class="on">%</span></li>
-              <li class="symbol"><span class="off">6</span><span class="on">^</span></li>
-              <li class="symbol"><span class="off">7</span><span class="on">&amp;</span></li>
-              <li class="symbol"><span class="off">8</span><span class="on">*</span></li>
-              <li class="symbol"><span class="off">9</span><span class="on">(</span></li>
-              <li class="symbol"><span class="off">0</span><span class="on">)</span></li>
-              <li class="symbol"><span class="off">-</span><span class="on">_</span></li>
-              <li class="symbol"><span class="off">=</span><span class="on">+</span></li>
-              <li class="delete lastitem">delete</li>
-              <li class="tab">tab</li>
-              <li class="letter">q</li>
-              <li class="letter">w</li>
-              <li class="letter">e</li>
-              <li class="letter">r</li>
-              <li class="letter">t</li>
-              <li class="letter">y</li>
-              <li class="letter">u</li>
-              <li class="letter">i</li>
-              <li class="letter">o</li>
-              <li class="letter">p</li>
-              <li class="symbol"><span class="off">[</span><span class="on">{</span></li>
-              <li class="symbol"><span class="off">]</span><span class="on">}</span></li>
-              <li class="symbol lastitem"><span class="off">\</span><span class="on">|</span></li>
-              <li class="capslock">caps lock</li>
-              <li class="letter">a</li>
-              <li class="letter">s</li>
-              <li class="letter">d</li>
-              <li class="letter">f</li>
-              <li class="letter">g</li>
-              <li class="letter">h</li>
-              <li class="letter">j</li>
-              <li class="letter">k</li>
-              <li class="letter">l</li>
-              <li class="symbol"><span class="off">;</span><span class="on">:</span></li>
-              <li class="symbol"><span class="off">'</span><span class="on">&quot;</span></li>
-              <li class="return lastitem">return</li>
-              <li class="left-shift">shift</li>
-              <li class="letter">z</li>
-              <li class="letter">x</li>
-              <li class="letter">c</li>
-              <li class="letter">v</li>
-              <li class="letter">b</li>
-              <li class="letter">n</li>
-              <li class="letter">m</li>
-              <li class="symbol"><span class="off">,</span><span class="on">&lt;</span></li>
-              <li class="symbol"><span class="off">.</span><span class="on">&gt;</span></li>
-              <li class="symbol"><span class="off">/</span><span class="on">?</span></li>
-              <li class="right-shift lastitem">shift</li>
-              <li class="space lastitem">&nbsp;</li>
-            </ul>
-          </div>
+          <div class="keyboard">
+        <table class="table">
+            <tr>
+                <td id="192" class="symbol"><span class="off">&nbsp;</span></td>
+                <td id="49" class="symbol"><span class="off">1</span></td>
+                <td id="50" class="symbol"><span class="off">2</span></td>
+                <td id="51" class="symbol"><span class="off">3</span></td>
+                <td id="52" class="symbol"><span class="off">4</span></td>
+                <td id="53" class="symbol"><span class="off">5</span></td>
+                <td id="54" class="symbol"><span class="off">6</span></td>
+                <td id="55" class="symbol"><span class="off">&uarr;</td>
+                <td id="56" class="symbol" style="padding: 0"><span class="off">&larr;</td>
+                <td id="57" class="symbol" style="padding: 0"><span class="off">&rarr;</td>
+                <td id="48" class="symbol"><span class="off">&darr;</td>
+                <td id="189" class="symbol"><span class="off">⠘</td>
+                <td id="8" class="delete lastitem">Delete</td>
+            </tr>
+        </table>
+        <table class="table">
+            <tr>
+                <td id="9" class="tab">tab</td>
+                <td id="81" class="letter">&nbsp;</td>
+                <td id="87" class="letter">w</td>
+                <td id="69" class="letter">e</td>
+                <td id="82" class="letter">r</td>
+                <td id="84" class="letter">t</td>
+                <td id="89" class="letter">y</td>
+                <td id="85" class="letter">u</td>
+                <td id="73" class="letter">i</td>
+                <td id="79" class="letter">o</td>
+                <td id="80" class="letter">p</td>
+                <td id="219" class="symbol"><span class="off">[</span><span class="on">{</span></td>
+                <td id="221" class="symbol"><span class="off">]</span><span class="on">}</span></td>
+                <td id="220" class="symbol lastitem"><span class="off">\</span><span class="on">|</span></td>
+            </tr>
+        </table>
+        <table class="table">
+            <tr>
+                <td id="20" class="capslock">Caps</td>
+                <td id="65" class="letter">a</td>
+                <td id="83" class="letter">s</td>
+                <td id="68" class="letter">d</td>
+                <td id="70" class="letter">f</td>
+                <td id="71" class="letter">g</td>
+                <td id="72" class="letter">h</td>
+                <td id="74" class="letter">j</td>
+                <td id="75" class="letter">k</td>
+                <td id="76" class="letter">l</td>
+                <td id="186" class="symbol"><span class="off">;</span><span class="on">:</span></td>
+                <td id="222" class="symbol"><span class="off">'</span><span class="on">&quot;</span></td>
+                <td id="13" class="return lastitem">Return</td>
+            </tr>
+        </table>
+        <table class="table">
+            <tr>
+                <td id="16" class="left-shift">Shift</td>
+                <td id="90" class="letter">z</td>
+                <td id="88" class="letter">x</td>
+                <td id="67" class="letter">c</td>
+                <td id="86" class="letter">v</td>
+                <td id="66" class="letter">b</td>
+                <td id="78" class="letter">n</td>
+                <td id="77" class="letter">m</td>
+                <td id="188" class="symbol"><span class="off">,</span><span class="on">&lt;</span></td>
+                <td id="190" class="symbol"><span class="off">.</span><span class="on">&gt;</span></td>
+                <td id="191" class="symbol"><span class="off">/</span><span class="on">?</span></td>
+                <td id="16a" class="right-shift lastitem">Shift</td>
+            </tr>
+        </table>
+        <table class="table">
+            <tr>
+                <td id="17" class="ctrl">Ctrl</td>
+                <td id="18" class="opt">Opt</td>
+                <td id="91" class="cmd1">Cmd</td>
+                <td id="32" class="space lastitem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td id="93" class="cmd2">Cmd</td>
+                <td id="18" class="opt2">Opt</td>
+            </tr>
+        </table>
+    </div>
         </div>
       </div>
     </main>
