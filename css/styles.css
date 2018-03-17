@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=latin-ext");
+@font-face {
+  font-family: "mayascript";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/mayascript/MayaFont-Regular.eot"), url("../fonts/mayascript/MayaFont-Regular.otf") format("opentype"), url("../fonts/mayascript/MayaFont-Regular.woff2") format("woff2"), url("../fonts/mayascript/MayaFont-Regular.woff") format("woff"), url("../fonts/mayascript/MayaFont-Regular.ttf") format("truetype"); }
 html {
   box-sizing: border-box;
   height: 100vh; }
@@ -16,7 +21,20 @@ header {
   background-color: #ed4747;
   width: 100%;
   display: flex;
-  z-index: 100; }
+  z-index: 100;
+  font-size: calc(0.6vw + .5em); }
+  header .menu_logo {
+    font-weight: 700;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; }
+    header .menu_logo .logo_icon {
+      font-family: "mayascript";
+      font-kerning: normal;
+      font-size: 2em;
+      font-weight: normal;
+      line-height: 0;
+      margin-top: 1em; }
   header div[class*="menu_opt"]:hover {
     background-color: #af3434;
     cursor: pointer;
@@ -272,13 +290,13 @@ footer {
     footer .footer_content div.american_museum {
       text-align: right; }
 
-@media (max-width: breakpoint-desktop) {
+@media (max-width: 1024px) {
   main {
     padding: 0 40px; } }
-@media (min-width: breakpoint-phone) and (max-width: breakpoint-tablet) {
+@media (min-width: 600px) and (max-width: 768px) {
   main .main_translator_content .translator_spanish, main .main_translator_content .translator_mayan {
     width: 45%; } }
-@media (max-width: breakpoint-phone) {
+@media (max-width: 600px) {
   main {
     padding: 0 40px; }
     main .main_translator_content .translator_spanish, main .main_translator_content .translator_mayan {
@@ -288,14 +306,9 @@ footer {
       margin-bottom: 30px; }
       main .main_transalor_title p.description {
         display: none; } }
-@media (max-width: breakpoint-small) {
+@media (max-width: 360px) {
   main .main_translator_content {
     margin: 0; } }
-@font-face {
-  font-family: "mayascript";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/mayascript/MayaFont-Regular.eot"), url("../fonts/mayascript/MayaFont-Regular.otf") format("opentype"), url("../fonts/mayascript/MayaFont-Regular.woff2") format("woff2"), url("../fonts/mayascript/MayaFont-Regular.woff") format("woff"), url("../fonts/mayascript/MayaFont-Regular.ttf") format("truetype"); }
 .game_content {
   display: flex;
   flex-flow: row nowrap;
@@ -308,7 +321,7 @@ footer {
     height: 100%; }
     .game_content .column.info_column {
       overflow-y: auto;
-      max-width: 15%;
+      width: 15%;
       padding: 4em 0 0 7em; }
       .game_content .column.info_column .column_introduction {
         margin-bottom: 0.3em; }
@@ -317,17 +330,38 @@ footer {
         font-size: 2em;
         font-weight: 700; }
       .game_content .column.info_column .column_description {
-        font-weight: 100; }
+        font-weight: 100;
+        margin-bottom: 1.5em; }
       .game_content .column.info_column .glyph_slide .glyph_box {
-        background-color: #443a34;
-        margin: 2em 0 0.5em;
-        height: 15em;
-        width: 100%; }
+        display: grid;
+        grid-template-columns: 3vw 9vw 3vw;
+        grid-template-rows: 3vw 9vw 3vw;
+        margin: 1em 0; }
+        .game_content .column.info_column .glyph_slide .glyph_box .glyph_box02 {
+          border: 1px solid gray; }
+        .game_content .column.info_column .glyph_slide .glyph_box .glyph_box04 {
+          border: 1px solid gray; }
+        .game_content .column.info_column .glyph_slide .glyph_box .glyph_box05 {
+          border: 1px solid #DBA94C; }
+        .game_content .column.info_column .glyph_slide .glyph_box .glyph_box06 {
+          border: 1px solid gray; }
+        .game_content .column.info_column .glyph_slide .glyph_box .glyph_box08 {
+          border: 1px solid gray; }
+      .game_content .column.info_column .glyph_slide .number_box {
+        display: none;
+        grid-template-columns: 3.6vw 3.6vw 3.6vw 3.6vw;
+        grid-template-rows: 15vw;
+        margin: 1em 0; }
+        .game_content .column.info_column .glyph_slide .number_box .n_box01, .game_content .column.info_column .glyph_slide .number_box .n_box02, .game_content .column.info_column .glyph_slide .number_box .n_box03, .game_content .column.info_column .glyph_slide .number_box .n_box04 {
+          border: 1px solid gray; }
+        .game_content .column.info_column .glyph_slide .number_box .n_box03 {
+          margin-left: 0.2em; }
       .game_content .column.info_column .glyph_slide .slide_arrows {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        justify-content: space-around; }
+        justify-content: space-around;
+        color: #DBA94C; }
       .game_content .column.info_column .glyph_slide .glyph_title {
         margin-top: 1em;
         font-size: 1.5em;
@@ -336,7 +370,7 @@ footer {
         font-weight: 200;
         margin-top: 0.3em; }
     .game_content .column.game_column {
-      width: 60%;
+      width: 39%;
       height: calc(100vh - 13.5em);
       margin: 0 7vw; }
       .game_content .column.game_column .game_main_box {
@@ -345,29 +379,55 @@ footer {
         grid-template-rows: 8vw 24vw 8vw; }
         .game_content .column.game_column .game_main_box .box02 {
           border: 3px solid gray; }
+          .game_content .column.game_column .game_main_box .box02.green {
+            border: 0;
+            border: 3px solid green;
+            background-color: rgba(0, 255, 0, 0.5); }
         .game_content .column.game_column .game_main_box .box04 {
           border: 3px solid gray; }
+          .game_content .column.game_column .game_main_box .box04.green {
+            border: 0;
+            border: 3px solid green;
+            background-color: rgba(0, 255, 0, 0.5); }
         .game_content .column.game_column .game_main_box .box05 {
           border: 3px solid #DBA94C; }
+          .game_content .column.game_column .game_main_box .box05.green {
+            border: 0;
+            border: 3px solid green;
+            background-color: rgba(0, 255, 0, 0.5); }
         .game_content .column.game_column .game_main_box .box06 {
           border: 3px solid gray; }
+          .game_content .column.game_column .game_main_box .box06.green {
+            border: 0;
+            border: 3px solid green;
+            background-color: rgba(0, 255, 0, 0.5); }
         .game_content .column.game_column .game_main_box .box08 {
           border: 3px solid gray; }
+          .game_content .column.game_column .game_main_box .box08.green {
+            border: 0;
+            border: 3px solid green;
+            background-color: rgba(0, 255, 0, 0.5); }
+      .game_content .column.game_column .game_number_box {
+        display: none;
+        grid-template-columns: 10vw 10vw 10vw 10vw;
+        grid-template-rows: 40vw; }
+        .game_content .column.game_column .game_number_box .number_box01, .game_content .column.game_column .game_number_box .number_box02, .game_content .column.game_column .game_number_box .number_box03, .game_content .column.game_column .game_number_box .number_box04 {
+          border: 3px solid gray; }
+        .game_content .column.game_column .game_number_box .number_box03 {
+          margin-left: 0.5em; }
+          .game_content .column.game_column .game_number_box .number_box03.green {
+            border: 0;
+            border: 3px solid green;
+            background-color: rgba(0, 255, 0, 0.5); }
     .game_content .column.glyphs_column {
       z-index: 100;
       overflow-y: auto;
-      max-width: 25%;
-      display: flex;
-      justify-content: space-between;
-      background-color: #443a34; }
+      width: 23%;
+      background-color: #443a34;
+      border-left: 2px solid black; }
       .game_content .column.glyphs_column .arrow {
-        cursor: pointer;
-        color: black;
-        display: flex;
-        align-items: center;
-        padding: 0.3em; }
+        display: none; }
       .game_content .column.glyphs_column .glyphs {
-        border-left: 2px solid black;
         width: 100%; }
         .game_content .column.glyphs_column .glyphs .minus {
           cursor: pointer; }
@@ -391,7 +451,7 @@ footer {
           flex-flow: row wrap;
           align-items: center;
           justify-content: space-around;
-          font-size: calc(5.3vh + 1em);
+          font-size: calc(2.1vw + 2.1vh + .5em);
           font-family: "mayascript";
           font-kerning: normal;
           line-height: 1em; }
@@ -420,7 +480,7 @@ footer {
           flex-flow: row wrap;
           align-items: center;
           justify-content: space-around;
-          font-size: calc(5.3vh + 1em);
+          font-size: calc(2.1vw + 2.1vh + .5em);
           font-family: "mayascript";
           font-kerning: normal;
           line-height: 1em; }
@@ -446,8 +506,129 @@ footer {
           flex-flow: row wrap;
           align-items: center;
           justify-content: space-around;
-          font-size: calc(3.5vh + 1em);
+          font-size: calc(1.5vw + 1.5vh + .5em);
           font-family: "mayascript";
           font-kerning: normal; }
+
+@media (max-width: 1366px) {
+  .game_content .column.info_column {
+    padding: 4em 0 0 5em; }
+  .game_content .column.game_column .game_main_box {
+    margin: 9vh 0; }
+  .game_content .column.game_column .game_number_box {
+    margin: 11vh 0; }
+  .game_content .column.glyphs_column {
+    width: 20%; }
+    .game_content .column.glyphs_column .glyphs .principal_sign .principal_elements {
+      font-size: calc(4.2vw + .5em); }
+      .game_content .column.glyphs_column .glyphs .principal_sign .principal_elements .sign {
+        padding-right: 0.2em; }
+    .game_content .column.glyphs_column .glyphs .other_signs .others_elements {
+      font-size: calc(3.6vw + .5em); }
+      .game_content .column.glyphs_column .glyphs .other_signs .others_elements .sign {
+        padding-right: 0.2em; } }
+@media (max-width: 1024px) and (orientation: portrait) {
+  .game_content .column.info_column {
+    width: 37%;
+    padding: 4em 0 0 4em; }
+    .game_content .column.info_column .glyph_slide .glyph_box {
+      grid-template-columns: 3.5vh 10.5vh 3.5vh;
+      grid-template-rows: 3.5vh 10.5vh 3.5vh; }
+    .game_content .column.info_column .glyph_slide .number_box {
+      grid-template-columns: 6vw 6vw 6vw 6vw;
+      grid-template-rows: 23vw; }
+    .game_content .column.info_column .glyph_slide .slide_arrows {
+      margin-left: -4em; }
+  .game_content .column.game_column {
+    width: 60%; }
+    .game_content .column.game_column .game_main_box {
+      grid-template-columns: 8vh 24vh 8vh;
+      grid-template-rows: 8vh 24vh 8vh; }
+    .game_content .column.game_column .game_number_box {
+      grid-template-columns: 11vw 11vw 11vw 11vw;
+      grid-template-rows: 45vw; }
+  .game_content .column.glyphs_column {
+    position: fixed;
+    width: 100%;
+    height: 28em;
+    bottom: 2.5em;
+    right: 0; }
+    .game_content .column.glyphs_column .glyphs .principal_sign {
+      border: 0; }
+      .game_content .column.glyphs_column .glyphs .principal_sign .principal_elements {
+        justify-content: center; }
+    .game_content .column.glyphs_column .glyphs .other_signs {
+      border: 0; }
+      .game_content .column.glyphs_column .glyphs .other_signs .others_elements {
+        justify-content: center; }
+    .game_content .column.glyphs_column .glyphs .numbers {
+      border: 0; }
+      .game_content .column.glyphs_column .glyphs .numbers .numbers_elements {
+        justify-content: center; }
+        .game_content .column.glyphs_column .glyphs .numbers .numbers_elements .number {
+          margin-right: 1em; } }
+@media (max-width: 1024px) and (orientation: landscape) {
+  .game_content .column.info_column {
+    padding: 4em 0 0 3em;
+    width: 20%; }
+    .game_content .column.info_column .glyph_slide .glyph_box {
+      margin: 1em 1.3em; }
+    .game_content .column.info_column .glyph_slide .slide_arrows {
+      margin-left: -0.5em; }
+  .game_content .column.game_column {
+    margin: 0 5vw; }
+    .game_content .column.game_column .game_main_box {
+      margin: 9vh -2vh; }
+  .game_content .column.glyphs_column {
+    width: 25%; }
+    .game_content .column.glyphs_column .glyphs .principal_sign .principal_elements {
+      font-size: calc(3.8vw + .5em); }
+    .game_content .column.glyphs_column .glyphs .other_signs .others_elements {
+      font-size: calc(3.3vw + .5em); } }
+@media (max-width: 768px) {
+  .game_content {
+    margin-top: 6vh; }
+    .game_content .column.info_column {
+      width: 33%;
+      padding: 2em 0 0 2em; }
+      .game_content .column.info_column .glyph_slide .glyph_box {
+        grid-template-columns: 4vh 12vh 4vh;
+        grid-template-rows: 4vh 12vh 4vh; }
+      .game_content .column.info_column .glyph_slide .number_box {
+        grid-template-columns: 7vw 7vw 7vw 7vw;
+        grid-template-rows: 27vw; }
+      .game_content .column.info_column .glyph_slide .slide_arrows {
+        margin-left: -1em; }
+    .game_content .column.game_column {
+      width: 60%; }
+      .game_content .column.game_column .game_number_box {
+        grid-template-columns: 13vw 13vw 13vw 13vw;
+        grid-template-rows: 52vw; }
+    .game_content .column.glyphs_column {
+      position: fixed;
+      width: 100%;
+      height: 26em;
+      bottom: 2em;
+      right: 0;
+      transform: translateY(23em);
+      transition: all 0.45s ease; }
+      .game_content .column.glyphs_column.invisible {
+        transform: translateY(0);
+        transition: all 0.45s ease; }
+      .game_content .column.glyphs_column .arrow {
+        cursor: pointer;
+        color: black;
+        display: flex;
+        justify-content: center;
+        transition: all 0.45s ease; }
+        .game_content .column.glyphs_column .arrow.with {
+          transform: rotate(180deg);
+          transition: all 0.45s ease; }
+      .game_content .column.glyphs_column .glyphs .principal_sign {
+        border: 0; }
+      .game_content .column.glyphs_column .glyphs .other_signs {
+        border: 0; }
+      .game_content .column.glyphs_column .glyphs .numbers {
+        border: 0; } }
 
 /*# sourceMappingURL=styles.css.map */

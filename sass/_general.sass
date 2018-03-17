@@ -15,6 +15,16 @@ header
 	width: 100%
 	display: flex
 	z-index: 100
+	font-size: calc(0.6vw + .5em)
+	.menu_logo
+		font-weight: 700
+		@include flex
+		.logo_icon
+			@include mayascript
+			font-size: 2em
+			font-weight: normal
+			line-height: 0
+			margin-top: 1em
 	div[class*="menu_opt"]:hover
 		background-color: #af3434
 		cursor: pointer
@@ -125,8 +135,7 @@ main
 				& textarea
 					background-color: #b2aeab
 					color: black
-					font-family: 'mayascript'
-					font-kerning: normal
+					@include mayascript
 					outline: none
 					font-size: 7em
 					padding: 0 60px
@@ -285,24 +294,20 @@ footer
 		div.american_museum
 			text-align: right
 
-$breakpoint-tablet: 768px
-$breakpoint-phone: 600px
-$breakpoint-desktop: 1024px
-$breakpoint-small: 360px
 
-@media (max-width: breakpoint-desktop)
+@media (max-width: $breakpoint-desktop)
 	main
 		padding: 0 40px
 
 
-@media (min-width: breakpoint-phone) and (max-width: breakpoint-tablet)
+@media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet)
 	main
 		.main_translator_content
 			.translator_spanish, .translator_mayan
 				width: 45%
 
 
-@media (max-width: breakpoint-phone)
+@media (max-width: $breakpoint-phone)
 	main
 		padding: 0 40px
 		.main_translator_content
@@ -315,7 +320,7 @@ $breakpoint-small: 360px
 				display: none
 
 
-@media (max-width: breakpoint-small)
+@media (max-width: $breakpoint-small)
 	main
 		.main_translator_content
 			margin: 0

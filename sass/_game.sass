@@ -12,7 +12,7 @@
 		height: 100%
 		&.info_column
 			overflow-y: auto
-			max-width: 15%
+			width: 15%
 			padding: 4em 0 0 7em
 			.column_introduction
 				margin-bottom: .3em
@@ -22,15 +22,41 @@
 				font-weight: 700
 			.column_description
 				font-weight: 100
+				margin-bottom: 1.5em
 			.glyph_slide
 				.glyph_box
-					background-color: #443a34 
-					margin: 2em 0 .5em
-					height: 15em
-					width: 100%
+					display: grid
+					grid-template-columns: 3vw 9vw 3vw
+					grid-template-rows: 3vw 9vw 3vw
+					margin: 1em 0
+					.glyph_box01
+					.glyph_box02
+						border: 1px solid gray
+					.glyph_box03
+					.glyph_box04
+						border: 1px solid gray
+					.glyph_box05
+						border: 1px solid #DBA94C
+					.glyph_box06
+						border: 1px solid gray
+					.glyph_box07
+					.glyph_box08
+						border: 1px solid gray
+					.box09
+				.number_box
+					display: none
+					//display: grid
+					grid-template-columns: 3.6vw 3.6vw 3.6vw 3.6vw
+					grid-template-rows: 15vw
+					margin: 1em 0
+					.n_box01, .n_box02, .n_box03, .n_box04
+						border: 1px solid gray
+					.n_box03
+						margin-left: .2em
 				.slide_arrows
 					@include flex
 					justify-content: space-around
+					color: #DBA94C
 				.glyph_title
 					margin-top: 1em
 					font-size: 1.5em
@@ -41,51 +67,76 @@
 
 		
 		&.game_column
-			width: 60%
+			width: 39%
 			height: calc(100vh - 13.5em)
 			margin: 0 7vw
 			.game_main_box
-				//width: 100%
-				//height: 100%
 				display: grid
 				grid-template-columns: 8vw 24vw 8vw
 				grid-template-rows: 8vw 24vw 8vw
 				.box01
 				.box02
 					border: 3px solid gray
+					&.green
+						border: 0
+						border: 3px solid green
+						background-color: rgba(0,255,0,.5)
 				.box03
 				.box04
 					border: 3px solid gray
+					&.green
+						border: 0
+						border: 3px solid green
+						background-color: rgba(0,255,0,.5)
 				.box05
 					border: 3px solid #DBA94C
+					&.green
+						border: 0
+						border: 3px solid green
+						background-color: rgba(0,255,0,.5)
 				.box06
 					border: 3px solid gray
+					&.green
+						border: 0
+						border: 3px solid green
+						background-color: rgba(0,255,0,.5)
 				.box07
 				.box08
 					border: 3px solid gray
+					&.green
+						border: 0
+						border: 3px solid green
+						background-color: rgba(0,255,0,.5)
 				.box09
+			.game_number_box
+				display: none
+				//display: grid
+				grid-template-columns: 10vw 10vw 10vw 10vw
+				grid-template-rows: 40vw
+				.number_box01, .number_box02, .number_box03, .number_box04 
+					border: 3px solid gray
+				.number_box03
+					margin-left: .5em
+					&.green
+						border: 0
+						border: 3px solid green
+						background-color: rgba(0,255,0,.5)
 
 
 		&.glyphs_column
 			z-index: 100
 			overflow-y: auto
-			max-width: 25%
-			display: flex
-			justify-content: space-between
+			width: 23%
 			background-color: #443a34 
+			border-left: 2px solid black
 			.arrow
-				cursor: pointer
-				//border-right: 1px solid black
-				color: black
-				display: flex
-				align-items: center
-				padding: .3em
+				display: none
 			.glyphs
-				border-left: 2px solid black
 				width: 100%
 				.minus
 					cursor: pointer
 				.principal_sign
+					//border-left: 2px solid black
 					.principal_title
 						@include flex
 						justify-content: space-between
@@ -102,12 +153,13 @@
 						cursor: pointer
 						@include flex-wrap
 						justify-content: space-around
-						font-size: calc(5.3vh + 1em)
+						font-size: calc(2.1vw + 2.1vh + .5em)
 						@include mayascript
 						line-height: 1em
 						.sign
 							padding-right: .3em
 				.other_signs
+					//border-left: 2px solid black
 					.others_title
 						@include flex
 						justify-content: space-between
@@ -128,12 +180,13 @@
 						cursor: pointer
 						@include flex-wrap
 						justify-content: space-around
-						font-size: calc(5.3vh + 1em)
+						font-size: calc(2.1vw + 2.1vh + .5em)
 						@include mayascript
 						line-height: 1em
 						.sign
 							padding-right: .3em
 				.numbers
+					//border-left: 2px solid black
 					.numbers_title
 						@include flex
 						justify-content: space-between
@@ -150,25 +203,233 @@
 						cursor: pointer
 						@include flex-wrap
 						justify-content: space-around
-						font-size: calc(3.5vh + 1em)
+						font-size: calc(1.5vw + 1.5vh + .5em)
 						@include mayascript
 						.number
 
 
+@media (max-width: 1366px)
+	
+	.game_content
+		.column
+			&.info_column
+				padding: 4em 0 0 5em
+			&.game_column
+				.game_main_box
+					margin: 9vh 0
+				.game_number_box
+					margin: 11vh 0
+			&.glyphs_column
+				width: 20%
+				.arrow
+				.glyphs
+					.minus
+					.principal_sign
+						.principal_title
+						.principal_elements
+							font-size: calc(4.2vw + .5em)
+							.sign
+								padding-right: 0.2em
+					.other_signs
+						.others_title
+							.title_text
+								.light
+						.others_elements
+							font-size: calc(3.6vw + .5em)
+							.sign
+								padding-right: 0.2em
+					.numbers
+						.numbers_title
+						.numbers_elements
+							//font-size: calc(3vw + .5em)
+							.number
 
-@media (max-width: breakpoint-desktop)
+
+@media (max-width: 1024px) and (orientation: portrait)
+
+	.game_content
+		.column
+			&.info_column
+				width: 37%
+				padding: 4em 0 0 4em
+				.column_introduction
+				.column_main_title
+				.column_description
+				.glyph_slide
+					.glyph_box
+						grid-template-columns: 3.5vh 10.5vh 3.5vh
+						grid-template-rows: 3.5vh 10.5vh 3.5vh
+					.number_box
+						grid-template-columns: 6vw 6vw 6vw 6vw
+						grid-template-rows: 23vw
+					.slide_arrows
+						margin-left: -4em
+					.glyph_title
+					.glyph_description
+
+			
+			&.game_column
+				width: 60%
+				.game_main_box
+					grid-template-columns: 8vh 24vh 8vh
+					grid-template-rows: 8vh 24vh 8vh
+				.game_number_box
+					grid-template-columns: 11vw 11vw 11vw 11vw
+					grid-template-rows: 45vw
+
+			&.glyphs_column
+				position: fixed
+				width: 100%
+				height: 28em
+				bottom: 2.5em
+				right: 0
+				.arrow
+				.glyphs
+					.minus
+					.principal_sign
+						border: 0
+						.principal_title
+						.principal_elements
+							justify-content: center
+							.sign
+					.other_signs
+						border: 0
+						.others_title
+							.title_text
+								.light
+						.others_elements
+							justify-content: center
+							.sign
+					.numbers
+						border: 0
+						.numbers_title
+						.numbers_elements
+							justify-content: center
+							.number
+								margin-right: 1em
 
 
+@media (max-width: 1024px) and (orientation: landscape)
 
-@media (max-width: breakpoint-tablet)
+	.game_content
+		.column
+			&.info_column
+				padding: 4em 0 0 3em
+				width: 20%
+				.column_introduction
+				.column_main_title
+				.column_description
+				.glyph_slide
+					.glyph_box
+						margin: 1em 1.3em
+					.number_box
+					.slide_arrows
+						margin-left: -.5em
+					.glyph_title
+					.glyph_description
+
+			
+			&.game_column
+				margin: 0 5vw
+				.game_main_box
+					margin: 9vh -2vh
+				.game_number_box
+
+			&.glyphs_column
+				width: 25%
+				.arrow
+				.glyphs
+					.minus
+					.principal_sign
+						.principal_title
+						.principal_elements
+							font-size: calc(3.8vw + .5em)
+							.sign
+					.other_signs
+						.others_title
+							.title_text
+								.light
+						.others_elements
+							font-size: calc(3.3vw + .5em)
+							.sign
+					.numbers
+						.numbers_title
+						.numbers_elements
+							//font-size: calc(3vw + .5em)
+							.number
 
 
+@media (max-width: 768px)
 
-@media (max-width: breakpoint-phone)
+	.game_content
+		margin-top: 6vh
+		.column
+			&.info_column
+				width: 33%
+				padding: 2em 0 0 2em
+				.column_introduction
+				.column_main_title
+				.column_description
+				.glyph_slide
+					.glyph_box
+						grid-template-columns: 4vh 12vh 4vh
+						grid-template-rows: 4vh 12vh 4vh
+					.number_box
+						grid-template-columns: 7vw 7vw 7vw 7vw
+						grid-template-rows: 27vw
+					.slide_arrows
+						margin-left: -1em
+					.glyph_title
+					.glyph_description
+
+			
+			&.game_column
+				width: 60%
+				.game_main_box
+				.game_number_box
+					grid-template-columns: 13vw 13vw 13vw 13vw
+					grid-template-rows: 52vw
 
 
-
-@media (max-width: breakpoint-small)
+			&.glyphs_column
+				position: fixed
+				width: 100%
+				height: 26em
+				bottom: 2em
+				right: 0
+				transform: translateY(23em)
+				transition: all 0.45s ease
+				&.invisible
+					transform: translateY(0)
+					transition: all 0.45s ease
+				.arrow
+					cursor: pointer
+					color: black
+					display: flex
+					justify-content: center
+					transition: all 0.45s ease
+					&.with
+						transform: rotate(180deg)
+						transition: all 0.45s ease
+				.glyphs
+					.minus
+					.principal_sign
+						border: 0
+						.principal_title
+						.principal_elements
+							.sign
+					.other_signs
+						border: 0
+						.others_title
+							.title_text
+								.light
+						.others_elements
+							.sign
+					.numbers
+						border: 0
+						.numbers_title
+						.numbers_elements
+							.number
 
 
 
