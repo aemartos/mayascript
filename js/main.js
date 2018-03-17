@@ -67,6 +67,7 @@ dropdown.on('click', function(ev) {
 // Function: Adding code to header
 var header = $("header");
 var menu_logo = $("<div class='menu_logo'></div>");
+//var menu_logo_text = $("<p><span class='logo_icon'>d</span><span class='logo_text'>MayaScript</span></p>");
 var menu_opt1 = $("<div class='menu_opt1'></div>");
 var menu_op1_text = $("<p><a href='index.html'>Descifrar</a></p>");
 var menu_opt2 = $("<div class='menu_opt2'></div>");
@@ -79,6 +80,7 @@ var menu_language = $("<div class='menu_language'></div>");
 var menu_language_opts = $("<p>ESP <span class='fa fa-caret-down'></span> </p>");
 
 header.append(menu_logo);
+//menu_logo.append(menu_logo_text);
 header.append(menu_opt1);
 menu_opt1.append(menu_op1_text);
 header.append(menu_opt2);
