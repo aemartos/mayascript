@@ -146,3 +146,20 @@ part.on('click', function(ev) {
     span_angel_left.toggleClass('with_sidebar');
   }
 })
+
+
+var textarea = $('.typo_textarea');
+var typo_open_close = $('.typo_open_close');
+var keyboard = $('.keyboard');
+typo_open_close.on('click', function(ev) {
+  console.log(textarea.parent());
+  $(this).toggleClass('invisible_keyboard');
+  if(!$(this).hasClass('invisible_keyboard')) {
+    keyboard.css({'transform': 'translateY(0vh)', 'visibility': 'visible', 'opacity': '100','display':'block', 'transition': 'all 0.5s ease'});
+    textarea.parent().css({'height': '50%','transition': 'all 0.5s ease'});
+  } else {
+    textarea.parent().css({'height': '93%', 'transition': 'all 0.5s ease'});
+    keyboard.css({'visibility': 'hidden', 'opacity': '0', 'display':'none', 'transition': 'all 0.5s ease'});
+
+  }
+});

@@ -16,25 +16,14 @@ body {
   max-width: 100vw;
   flex-wrap: wrap;
   flex-direction: column; }
+  body ::-webkit-scrollbar {
+    display: none; }
 
 header {
   background-color: #ed4747;
   width: 100%;
   display: flex;
-  z-index: 100;
-  font-size: calc(0.6vw + .5em); }
-  header .menu_logo {
-    font-weight: 700;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center; }
-    header .menu_logo .logo_icon {
-      font-family: "mayascript";
-      font-kerning: normal;
-      font-size: 2em;
-      font-weight: normal;
-      line-height: 0;
-      margin-top: 1em; }
+  z-index: 100; }
   header div[class*="menu_opt"]:hover {
     background-color: #af3434;
     cursor: pointer;
@@ -125,17 +114,18 @@ main {
         background-image: url("../img/indig2.png");
         background-size: contain; }
     main .main_content .main_content_info_typo {
-      width: 75%;
+      width: calc(75% - 60px);
       background-color: #443a34;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       font-family: "mayascript" !important; }
       main .main_content .main_content_info_typo .typo_textarea, main .main_content .main_content_info_typo .typo_keyboard {
         text-decoration: none;
         width: 100%;
         height: 50%;
         display: flex;
-        justify-content: center; }
+        justify-content: center;
+        transition: all 0.5s ease; }
         main .main_content .main_content_info_typo .typo_textarea textarea, main .main_content .main_content_info_typo .typo_keyboard textarea {
           background-color: #b2aeab;
           color: black;
@@ -149,8 +139,8 @@ main {
           height: calc(100% - 40px); }
         main .main_content .main_content_info_typo .typo_textarea ul, main .main_content .main_content_info_typo .typo_keyboard ul {
           color: black !important; }
-      main .main_content .main_content_info_typo .typo_keyboard {
-        height: calc(45% - 10px) !important;
+      main .main_content .main_content_info_typo .keyboard {
+        width: 100%;
         padding-top: 10px; }
       main .main_content .main_content_info_typo .typo_open_close {
         display: flex;
@@ -290,13 +280,13 @@ footer {
     footer .footer_content div.american_museum {
       text-align: right; }
 
-@media (max-width: 1024px) {
+@media (max-width: breakpoint-desktop) {
   main {
     padding: 0 40px; } }
-@media (min-width: 600px) and (max-width: 768px) {
+@media (min-width: breakpoint-phone) and (max-width: breakpoint-tablet) {
   main .main_translator_content .translator_spanish, main .main_translator_content .translator_mayan {
     width: 45%; } }
-@media (max-width: 600px) {
+@media (max-width: breakpoint-phone) {
   main {
     padding: 0 40px; }
     main .main_translator_content .translator_spanish, main .main_translator_content .translator_mayan {
@@ -306,7 +296,7 @@ footer {
       margin-bottom: 30px; }
       main .main_transalor_title p.description {
         display: none; } }
-@media (max-width: 360px) {
+@media (max-width: breakpoint-small) {
   main .main_translator_content {
     margin: 0; } }
 .game_content {

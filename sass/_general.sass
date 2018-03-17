@@ -10,21 +10,13 @@ body
 	//height: 100vh
 	flex-wrap: wrap
 	flex-direction: column
+	::-webkit-scrollbar
+		display: none
 header
 	background-color: #ed4747
 	width: 100%
 	display: flex
 	z-index: 100
-	font-size: calc(0.6vw + .5em)
-	.menu_logo
-		font-weight: 700
-		@include flex
-		.logo_icon
-			@include mayascript
-			font-size: 2em
-			font-weight: normal
-			line-height: 0
-			margin-top: 1em
 	div[class*="menu_opt"]:hover
 		background-color: #af3434
 		cursor: pointer
@@ -61,7 +53,7 @@ main
 		flex-wrap: nowrap
 		justify-content: space-between
 		transition: all 0.25s ease
-		
+
 		.main_content_title
 			width: 25%
 			position: relative
@@ -121,10 +113,11 @@ main
 				background-size: contain
 
 		.main_content_info_typo
-			width: 75%
+			width: calc(75% - 60px)
 			background-color: #443a34
 			display: flex
-			flex-direction: column
+			flex-wrap: wrap
+			//flex-direction: column
 			font-family: 'mayascript' !important
 			.typo_textarea, .typo_keyboard
 				text-decoration: none
@@ -132,10 +125,12 @@ main
 				height: 50%
 				display: flex
 				justify-content: center
+				transition: all 0.5s ease
 				& textarea
 					background-color: #b2aeab
 					color: black
-					@include mayascript
+					font-family: 'mayascript'
+					font-kerning: normal
 					outline: none
 					font-size: 7em
 					padding: 0 60px
@@ -144,8 +139,8 @@ main
 					height: calc(100% - 40px)
 				& ul
 					color: black !important
-			.typo_keyboard
-				height: calc(45% - 10px) !important
+			.keyboard
+				width: 100%
 				padding-top: 10px
 			.typo_open_close
 				display: flex
@@ -294,20 +289,24 @@ footer
 		div.american_museum
 			text-align: right
 
+$breakpoint-tablet: 768px
+$breakpoint-phone: 600px
+$breakpoint-desktop: 1024px
+$breakpoint-small: 360px
 
-@media (max-width: $breakpoint-desktop)
+@media (max-width: breakpoint-desktop)
 	main
 		padding: 0 40px
 
 
-@media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet)
+@media (min-width: breakpoint-phone) and (max-width: breakpoint-tablet)
 	main
 		.main_translator_content
 			.translator_spanish, .translator_mayan
 				width: 45%
 
 
-@media (max-width: $breakpoint-phone)
+@media (max-width: breakpoint-phone)
 	main
 		padding: 0 40px
 		.main_translator_content
@@ -320,7 +319,7 @@ footer
 				display: none
 
 
-@media (max-width: $breakpoint-small)
+@media (max-width: breakpoint-small)
 	main
 		.main_translator_content
 			margin: 0

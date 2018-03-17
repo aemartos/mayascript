@@ -7,7 +7,7 @@ data_syl_game = [
 	"mayan": "ba-ki",
 	"transcription": "baak",
 	"description": "(1) inalienablemente poseído, (2) “cautivo” atrapado en guerra",
-	"syllables": {	
+	"syllables": {
 		"syl01": "",
 		"syl02": "",
 		"syl03": "ba prin",
@@ -21,7 +21,7 @@ data_syl_game = [
 	"mayan": "ko-ha-wa",
 	"transcription": "kohaw / ko’haw",
 	"description": "Particularmente los yelmos de placas de concha provenientes de Teotihuacan",
-	"syllables": {	
+	"syllables": {
 		"syl01": "",
 		"syl02": "ko",
 		"syl03": "ha prin",
@@ -35,7 +35,7 @@ data_syl_game = [
 	"mayan": "ko-ko-no-ma",
 	"transcription": "ko[h]knom",
 	"description": "Usado en referencias específicas en relación con las deidades patronas de Copan",
-	"syllables": {	
+	"syllables": {
 		"syl01": "ko",
 		"syl02": "ko",
 		"syl03": "no prin",
@@ -49,7 +49,7 @@ data_syl_game = [
 	"mayan": "u-k'a-cha-wa",
 	"transcription": "u-kach-aw",
 	"description":"",
-	"syllables": {	
+	"syllables": {
 		"syl01": "",
 		"syl02": "u",
 		"syl03": "kaa prin",
@@ -63,7 +63,7 @@ data_syl_game = [
 	"mayan": "ye-ma-la",
 	"transcription": "y-e[h]m-al",
 	"description": "",
-	"syllables": {	
+	"syllables": {
 		"syl01": "",
 		"syl02": "",
 		"syl03": "ye prin",
@@ -77,7 +77,7 @@ data_syl_game = [
 	"mayan": "(y)a-k’u-tu-u",
 	"transcription": "(y)a[h]k’tu’, (y)a[h]k’utu’",
 	"description": "lit. “cosa para dar”",
-	"syllables": {	
+	"syllables": {
 		"syl01": "",
 		"syl02": "ya",
 		"syl03": "ku prin",
@@ -93,7 +93,7 @@ data_syl_game = [
 	"description": "teónimo para el dios B",
 	"syllables": {
 		"syl01": "",
-		"syl02": "",		
+		"syl02": "",
 		"syl03": "cha_p prin",
 		"syl04": "ki",
 		"syl05": ""
@@ -107,7 +107,7 @@ data_syl_game = [
 	"description": "",
 	"syllables": {
 		"syl01": "",
-		"syl02": "",	
+		"syl02": "",
 		"syl03": "cha_p prin",
 		"syl04": "na_o1",
 		"syl05": ""
@@ -119,7 +119,7 @@ data_syl_game = [
 	"mayan": "cha-pa-ta",
 	"transcription": "chapa[’h]t, chapa[ah]t, chapa[h]t, chapat",
 	"description": "comúnmente se refiere a figuras sobrenaturales que presentan atributos relacionados con el ciempiés",
-	"syllables": {	
+	"syllables": {
 		"syl01": "",
 		"syl02": "cha_o",
 		"syl03": "pa prin",
@@ -133,7 +133,7 @@ data_syl_game = [
 	"mayan": "ch’a-ho-ma",
 	"transcription": "ch’ahom",
 	"description": "",
-	"syllables": {	
+	"syllables": {
 		"syl01": "",
 		"syl02": "chaa",
 		"syl03": "ho prin",
@@ -153,7 +153,7 @@ data_num_game = [
 	"spanish" :"",
 	"mayan" :"",
 	"description":"",
-	"numbers" : {	
+	"numbers" : {
 		"num01" : "1",
 		"num02" : "5",
 		"num03" : "4",
@@ -167,7 +167,7 @@ data_num_game = [
 	"spanish" :"",
 	"mayan" :"",
 	"description":"",
-	"numbers" : {	
+	"numbers" : {
 		"num01" : "2",
 		"num02" : "5",
 		"num03" : "2",
@@ -181,7 +181,7 @@ data_num_game = [
 	"spanish" :"",
 	"mayan" :"",
 	"description":"",
-	"numbers" : {	
+	"numbers" : {
 		"num01" : "3",
 		"num02" : "5",
 		"num03" : "6",
@@ -195,7 +195,7 @@ data_num_game = [
 	"spanish" :"",
 	"mayan" :"",
 	"description":"",
-	"numbers" : {	
+	"numbers" : {
 		"num01" : "4",
 		"num02" : "5",
 		"num03" : "4",
@@ -209,7 +209,7 @@ data_num_game = [
 	"spanish" :"doscientos cinco",
 	"mayan" :"",
 	"description":"",
-	"numbers" : {	
+	"numbers" : {
 		"num01" : "5",
 		"num02" : "5",
 		"num03" : "5",
@@ -221,8 +221,8 @@ data_num_game = [
 
 
 data_syl = [
-
-	"pa":"A", 
+	{
+	"pa":"A",
 	"ba": "a",
 	"no": "S",
 	"ma_p": "s",
@@ -273,7 +273,6 @@ data_syl = [
 	"three": "3",
 	"four": "4",
 	"five": "5",
-	"zero": "6",
-
+	"zero": "6"
+	}
 ];
-
