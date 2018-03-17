@@ -1,59 +1,73 @@
-#container {
-margin: 100px auto;
-width: 688px;
+body {
+    margin: 0;
 }
-#keyboard {
-margin: 0;
-padding: 0;
-list-style: none;
+
+.keyboard table {
+    width: 100%;
+    font-family: 'mayascript';
+    font-size: 2vw;
+    color: white;
 }
-    #keyboard li {
-    float: left;
-    margin: 0 5px 5px 0;
-    width: 40px;
-    height: 35px;
-    line-height: 40px;
+
+.keyboard table td {
     text-align: center;
-    background: #fff;
-    border: 1px solid #f9f9f9;
-    -moz-border-radius: 5px;
+    padding: 5px;
+    background: #2E2E2E;
+    border: 2px solid #443a34;
     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+td.delete, td.tab, td.capslock, td.return, td.left-shift, td.right-shift,
+td.ctrl, td.opt, td.cmd1, td.cmd2, td.opt2
+{
+  font-family: 'Roboto';
+  font-size: 1.5vw;
+}
+
+.hover {
+    -moz-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
+    -webkit-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
+    -o-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
+    -ms-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
+    transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
+}
+
+.keydown {
+    -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.capsLockOn {
+    color: #dba94c;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.on {
+    display: none;
+}
+
+.off {
+    display: block;
+}
+
+@media screen and (min-width: 640px) {
+    .keyboard table {
+        font-size: 2.3vw;
     }
-        .capslock, .tab, .left-shift {
-        clear: left;
-        }
-            #keyboard .tab, #keyboard .delete {
-            width: 70px;
-            }
-            #keyboard .capslock {
-            width: 80px;
-            }
-            #keyboard .return {
-            width: 77px;
-            }
-            #keyboard .left-shift {
-            width: 95px;
-            }
-            #keyboard .right-shift {
-            width: 109px;
-            }
-        .lastitem {
-        margin-right: 0;
-        }
-        .uppercase {
-        text-transform: uppercase;
-        }
-        #keyboard .space {
-        clear: left;
-        width: 681px;
-        }
-        .on {
-        display: none;
-        }
-        #keyboard li:hover {
-        position: relative;
-        top: 1px;
-        left: 1px;
-        border-color: #e5e5e5;
-        cursor: pointer;
-        }
+    .keyboard table td {
+        /* padding: 2px 5px; */
+        border: 2px solid #443a34;
+    }
+}
+
+.text-container {
+    margin: 10px;
+}
