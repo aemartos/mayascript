@@ -9,14 +9,45 @@ body {
     color: white;
 }
 
+.keyboard table.table_1 td {
+  width: calc(100% / 14);
+  min-height: auto;
+}
+.keyboard table.table_2 td {
+  width: calc(100% / 13.5);
+}
+.keyboard table.table_3 td, .keyboard table.table_4 td, .keyboard table.table_5 td {
+  width: calc(100% / 16);
+}
+
+.keyboard table.table_5 tbody tr td.ctrl, .keyboard table.table_5 tbody tr td.cmd1
+.keyboard table.table_5 tbody tr td.cmd2 , .keyboard table.table_5 tbody tr td.opt1,
+.keyboard table.table_5 tbody tr td.opt2 {
+  width: calc(2*100% / 16);
+}
+
+.keyboard table.table_5 tbody tr td.space {
+  width: calc(6*100% / 16);
+}
+
+.keyboard table.table_1 tbody tr td.delete, .keyboard table.table_3 tbody tr td.capslock,
+ .keyboard table.table_3 tbody tr td.return{
+  width: calc(2*100% / 14);
+}
+.keyboard table.table_2 tbody tr td.tab, .keyboard table.table_4 tbody tr td.left-shift,
+ .keyboard table.table_4 tbody tr td.right-shift{
+  width: calc(1.5*100% / 14);
+}
+
 .keyboard table td {
     text-align: center;
     padding: 5px;
-    background: #2E2E2E;
+    /* background: #2E2E2E; */
     border: 2px solid #443a34;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    background-color: #191005
 }
 
 td.delete, td.tab, td.capslock, td.return, td.left-shift, td.right-shift,
@@ -24,6 +55,12 @@ td.ctrl, td.opt, td.cmd1, td.cmd2, td.opt2
 {
   font-family: 'Roboto';
   font-size: 1.5vw;
+}
+
+textarea {
+  resize: none;
+  text-decoration: none;
+  user-select: none;
 }
 
 .hover {
@@ -65,6 +102,7 @@ td.ctrl, td.opt, td.cmd1, td.cmd2, td.opt2
     .keyboard table td {
         /* padding: 2px 5px; */
         border: 2px solid #443a34;
+        background-color: #191005
     }
 }
 

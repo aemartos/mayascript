@@ -55,7 +55,14 @@ main {
     justify-content: space-between;
     transition: all 0.25s ease; }
     main .main_content .main_content_title {
-      width: 25%; }
+      width: 25%;
+      position: relative; }
+      main .main_content .main_content_title .fa-question-circle {
+        position: absolute;
+        bottom: 0; }
+        main .main_content .main_content_title .fa-question-circle:hover {
+          color: #ed4747;
+          cursor: pointer; }
     main .main_content .main_content_info {
       width: calc(70% - 40px);
       height: auto;

@@ -114,10 +114,11 @@ var KEYCODES = {
 };
 
 function type(param) {
+    var text_content = textarea.val();
     if (shift == true || capsLock == true) {
-        textarea.val(textarea.val() + param.toUpperCase());
+        textarea.val(text_content + param.toUpperCase());
     } else {
-        textarea.val(textarea.val() + param);
+        textarea.val(text_content + param);
     }
 }
 

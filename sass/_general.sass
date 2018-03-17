@@ -51,8 +51,17 @@ main
 		flex-wrap: nowrap
 		justify-content: space-between
 		transition: all 0.25s ease
+		
 		.main_content_title
 			width: 25%
+			position: relative
+			& .fa-question-circle
+				position: absolute
+				bottom: 0
+				&:hover
+					color: #ed4747
+					cursor: pointer
+
 		.main_content_info
 			//background-color: #443a34
 			width: calc(70% - 40px)
