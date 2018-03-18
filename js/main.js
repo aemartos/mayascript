@@ -165,3 +165,13 @@ typo_open_close.on('click', function(ev) {
 
   }
 });
+
+$('.fa-question-circle').on('click', function(ev) {
+  var carousel = $(".owl-carousel");
+  carousel.owlCarousel('invalidate', 'width');
+  carousel.owlCarousel('refresh');
+  carousel.owlCarousel({
+      items : 1,
+      nav: true
+  });
+});
