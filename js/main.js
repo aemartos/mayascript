@@ -167,11 +167,25 @@ typo_open_close.on('click', function(ev) {
 });
 
 $('.fa-question-circle').on('click', function(ev) {
-  var carousel = $(".owl-carousel");
-  carousel.owlCarousel('invalidate', 'width');
-  carousel.owlCarousel('refresh');
-  carousel.owlCarousel({
-      items : 1,
-      nav: true
+  var $carousel = $('.owl-carousel');
+  $carousel.owlCarousel({
+      margin:10,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+
   });
+});
+
+$('.remodal').change(function(ev) {
+  console.log("HOLA");
+  $('.owl-carousel').trigger('refresh.owl.carousel');
 });
