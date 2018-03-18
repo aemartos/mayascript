@@ -157,9 +157,11 @@ typo_open_close.on('click', function(ev) {
   if(!$(this).hasClass('invisible_keyboard')) {
     keyboard.css({'transform': 'translateY(0vh)', 'visibility': 'visible', 'opacity': '100','display':'block', 'transition': 'all 0.5s ease'});
     textarea.parent().css({'height': '50%','transition': 'all 0.5s ease'});
+    typo_open_close.children().toggleClass('closed');
   } else {
     textarea.parent().css({'height': '93%', 'transition': 'all 0.5s ease'});
     keyboard.css({'visibility': 'hidden', 'opacity': '0', 'display':'none', 'transition': 'all 0.5s ease'});
+    typo_open_close.children().toggleClass('closed');
 
   }
 });
