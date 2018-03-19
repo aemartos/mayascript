@@ -69,7 +69,7 @@ var header = $("header");
 var menu_logo = $("<div class='menu_logo'></div>");
 //var menu_logo_text = $("<p><span class='logo_icon'>d</span><span class='logo_text'>MayaScript</span></p>");
 var menu_opt1 = $("<div class='menu_opt1'></div>");
-var menu_op1_text = $("<p><a href='index.html'>Descifrar</a></p>");
+var menu_op1_text = $("<p><a href='home.html'>Descifrar</a></p>");
 var menu_opt2 = $("<div class='menu_opt2'></div>");
 var menu_opt2_text = $("<p><a href='game.html'>Construir</a></p>");
 var menu_opt3 = $("<div class='menu_opt3'></div>");
