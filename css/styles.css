@@ -677,8 +677,8 @@ footer {
     width: 32%;
     padding: 4em 0 0 4em; }
     .game_content .column.info_column .glyph_slide .glyph_box {
-      grid-template-columns: 4.5vh 9vh 4.5vh;
-      grid-template-rows: 4.5vh 9vh 4.5vh; }
+      grid-template-columns: 6vw 12vw 6vw;
+      grid-template-rows: 6vw 12vw 6vw; }
       .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx div {
         font-size: 19vw;
         top: 6vw; }
@@ -695,8 +695,8 @@ footer {
         top: 2.9vw;
         left: 1.96vw; }
     .game_content .column.info_column .glyph_slide .number_box {
-      grid-template-columns: 4.5vh 4.5vh 4.5vh 4.5vh;
-      grid-template-rows: 18vh; }
+      grid-template-columns: 6vw 6vw 6vw 6vw;
+      grid-template-rows: 24vw; }
       .game_content .column.info_column .glyph_slide .number_box .n_box div {
         font-size: 19.9vw;
         line-height: 0;
@@ -708,8 +708,8 @@ footer {
   .game_content .column.game_column {
     width: 60%; }
     .game_content .column.game_column .game_main_box {
-      grid-template-columns: 10vh 20vh 10vh;
-      grid-template-rows: 10vh 20vh 10vh; }
+      grid-template-columns: 13.25vw 26.5vw 13.25vw;
+      grid-template-rows: 13.25vw 26.5vw 13.25vw; }
       .game_content .column.game_column .game_main_box .droppable {
         font-size: 42.5vw; }
       .game_content .column.game_column .game_main_box .box02 div, .game_content .column.game_column .game_main_box .box04 div, .game_content .column.game_column .game_main_box .box05 div, .game_content .column.game_column .game_main_box .box06 div, .game_content .column.game_column .game_main_box .box08 div {
@@ -727,8 +727,8 @@ footer {
         top: 6.4vw;
         left: 4.5vw; }
     .game_content .column.game_column .game_number_box {
-      grid-template-columns: 10vh 10vh 10vh 10vh;
-      grid-template-rows: 40vh; }
+      grid-template-columns: 13.25vw 13.25vw 13.25vw 13.5vw;
+      grid-template-rows: 53vw; }
       .game_content .column.game_column .game_number_box .droppable {
         position: relative; }
         .game_content .column.game_column .game_number_box .droppable div {
@@ -925,23 +925,28 @@ footer {
           font-size: 1.2em; }
         .game_content .column.info_column .info_column_text .column_description {
           font-size: 0.8em; }
-      .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx div {
-        font-size: 25vw;
-        top: 8vw; }
-      .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx.glyph_box02 div {
-        top: 3.9vw;
-        left: 2.75vw; }
-      .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx.glyph_box04 div {
-        left: -1.15vw; }
-      .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx.glyph_box05 div {
-        left: -1.35vw; }
-      .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx.glyph_box06 div {
-        left: -1.3vw; }
-      .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx.glyph_box08 div {
-        top: 3.9vw;
-        left: 2.75vw; }
+      .game_content .column.info_column .glyph_slide .glyph_box {
+        grid-template-columns: 8vw 16vw 8vw;
+        grid-template-rows: 8vw 16vw 8vw; }
+        .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx div {
+          font-size: 25vw;
+          top: 8vw; }
+        .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx.glyph_box02 div {
+          top: 3.9vw;
+          left: 2.75vw; }
+        .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx.glyph_box04 div {
+          left: -1.15vw; }
+        .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx.glyph_box05 div {
+          left: -1.35vw; }
+        .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx.glyph_box06 div {
+          left: -1.3vw; }
+        .game_content .column.info_column .glyph_slide .glyph_box .glyph_boxx.glyph_box08 div {
+          top: 3.9vw;
+          left: 2.75vw; }
       .game_content .column.info_column .glyph_slide .number_box {
-        margin: 0; }
+        margin: 0;
+        grid-template-columns: 8vw 8vw 8vw 8vw;
+        grid-template-rows: 32vw; }
         .game_content .column.info_column .glyph_slide .number_box .n_box div {
           font-size: 26vw;
           top: 16vw;
@@ -957,22 +962,26 @@ footer {
       width: 100%;
       padding-top: 0; }
       .game_content .column.game_column .game_main_box {
+        grid-template-columns: 18vw 36vw 18vw;
+        grid-template-rows: 18vw 36vw 18vw;
         margin: 2vh 7.5vh; }
         .game_content .column.game_column .game_main_box .droppable div {
-          font-size: 55.5vw;
-          top: 16.6vw;
-          left: -3.5vw; }
+          font-size: 58vw;
+          top: 17.3vw;
+          left: -3.3vw; }
         .game_content .column.game_column .game_main_box .droppable.box02 div {
           top: 8.1vw;
           left: 5.8vw; }
         .game_content .column.game_column .game_main_box .droppable.box04 div {
           left: -3vw; }
         .game_content .column.game_column .game_main_box .droppable.box06 div {
-          left: -2.8vw; }
+          left: -3.2vw; }
         .game_content .column.game_column .game_main_box .droppable.box08 div {
           top: 8.1vw;
-          left: 5.8vw; }
+          left: 5.45vw; }
       .game_content .column.game_column .game_number_box {
+        grid-template-columns: 18vw 18vw 18vw 18vw;
+        grid-template-rows: 72vw;
         margin: 2vh 7.5vh; }
         .game_content .column.game_column .game_number_box .droppable div {
           font-size: 59vw;
