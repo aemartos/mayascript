@@ -143,9 +143,35 @@ typo_open_close.on('click', function(ev) {
   if(!$(this).hasClass('invisible_keyboard')) {
     keyboard.css({'transform': 'translateY(0vh)', 'visibility': 'visible', 'opacity': '100','display':'block', 'transition': 'all 0.5s ease'});
     textarea.parent().css({'height': '50%','transition': 'all 0.5s ease'});
+    typo_open_close.children().toggleClass('closed');
   } else {
     textarea.parent().css({'height': '93%', 'transition': 'all 0.5s ease'});
     keyboard.css({'visibility': 'hidden', 'opacity': '0', 'display':'none', 'transition': 'all 0.5s ease'});
+    typo_open_close.children().toggleClass('closed');
 
   }
+});
+
+$('.fa-question-circle').on('click', function(ev) {
+  var $carousel = $('.owl-carousel');
+  $carousel.owlCarousel({
+      margin:10,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:1
+          },
+          1000:{
+              items:1
+          }
+      }
+
+  });
+});
+
+$('.remodal').change(function(ev) {
+  console.log("HOLA");
+  $('.owl-carousel').trigger('refresh.owl.carousel');
 });
