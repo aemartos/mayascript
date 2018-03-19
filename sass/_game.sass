@@ -1,6 +1,6 @@
-
-
-
+*
+	@include user-select
+	@include box-sizing(border-box)
 
 .game_content
 	@include flex
@@ -12,7 +12,7 @@
 		height: 100%
 		&.info_column
 			overflow-y: auto
-			width: 15%
+			width: 22%
 			padding: 4em 0 0 7em
 			.column_introduction
 				margin-bottom: .3em
@@ -26,111 +26,203 @@
 			.glyph_slide
 				.glyph_box
 					display: grid
-					grid-template-columns: 3vw 9vw 3vw
-					grid-template-rows: 3vw 9vw 3vw
-					margin: 1em 0
-					.glyph_box01
-					.glyph_box02
-						border: 1px solid gray
-					.glyph_box03
-					.glyph_box04
-						border: 1px solid gray
-					.glyph_box05
-						border: 1px solid #DBA94C
-					.glyph_box06
-						border: 1px solid gray
-					.glyph_box07
-					.glyph_box08
-						border: 1px solid gray
-					.box09
+					grid-template-columns: 3.7vw 7.4vw 3.7vw
+					grid-template-rows: 3.7vw 7.4vw 3.7vw
+					margin: .175em 0
+					@include mayascript
+					.glyph_boxx
+						position: relative
+						div
+							position: absolute
+							line-height: 0
+							font-size: 11.9vw
+							top: 3.65vw
+						&.glyph_box01
+						&.glyph_box02
+							border: 1px solid gray
+							div
+								top: 1.8vw
+								left: 1.26vw
+								@include transform(rotate(-90deg))
+						&.glyph_box03
+						&.glyph_box04
+							border: 1px solid gray
+							div
+								left: -0.57vw
+								@include transform(scaleX(-1))
+						&.glyph_box05
+							border: 1px solid #DBA94C
+							div
+								z-index: 1
+								left: -.65vw
+						&.glyph_box06
+							border: 1px solid gray
+							div
+								left: -0.57vw
+						&.glyph_box07
+						&.glyph_box08
+							border: 1px solid gray
+							div
+								top: 1.8vw
+								left: 1.26vw
+								@include transform(rotate(90deg))
+						&.glyph_box09
 				.number_box
 					display: none
 					//display: grid
 					grid-template-columns: 3.6vw 3.6vw 3.6vw 3.6vw
-					grid-template-rows: 15vw
-					margin: 1em 0
-					.n_box01, .n_box02, .n_box03, .n_box04
+					grid-template-rows: 14.8vw
+					margin: .2em 0
+					@include mayascript
+					.n_box
+						position: relative
 						border: 1px solid gray
-					.n_box03
-						margin-left: .2em
+						div
+							position: absolute
+							font-size: 12.3vw
+							line-height: 0
+							top: 7.33vw
+							left: .5vw
+							&.zero
+								margin-left: -.05em
+						&.n_box01
+						&.n_box02
+						&.n_box03
+							//margin-left: .2em
+						&.n_box04
 				.slide_arrows
 					@include flex
 					justify-content: space-around
 					color: #DBA94C
+					cursor: pointer
+					margin-left: -.6vw
+					#arrow_right, #arrow_left
+						@include transition (all 0.2s ease)
+						&:hover
+							@include hover-opacity
 				.glyph_title
 					margin-top: 1em
-					font-size: 1.5em
+					font-size: 1.3em
 					font-weight: 300
+				.glyph_mayan
+					font-style: italic
+					font-weight: 200
+					padding-top: .3em
+					opacity: .7
+				.glyph_trans_num
+					font-style: italic
+					padding-top: .3em
+					font-weight: 200
+					font-size: .7em
+					opacity: .4
 				.glyph_description
 					font-weight: 200
 					margin-top: .3em
+					opacity: .6
+					font-size: .9em
+
 
 		
 		&.game_column
-			width: 39%
+			width: 40%
 			height: calc(100vh - 13.5em)
-			margin: 0 7vw
+			//margin: 0 7vw
 			.game_main_box
 				display: grid
-				grid-template-columns: 8vw 24vw 8vw
-				grid-template-rows: 8vw 24vw 8vw
+				grid-template-columns: 10vw 20vw 10vw
+				grid-template-rows: 10vw 20vw 10vw
+				@include mayascript
+				.droppable
+					position: relative
+					font-size: 32.2vw
+					&.completed
+						border-color: transparent !important
+					&.green
+						border: 0
+						border: 3px solid green
+						//background-color: rgba(0,255,0,.5)
+					&.red
+						border: 0
+						border: 3px solid red
+						//background-color: rgba(255,0,0,.5)
+				.box02, .box04, .box05, .box06, .box08
+					div
+						position: absolute
+						line-height: 0
+						top: 9.9vw
 				.box01
 				.box02
 					border: 3px solid gray
-					&.green
-						border: 0
-						border: 3px solid green
-						background-color: rgba(0,255,0,.5)
+					div
+						top: 4.85vw
+						left: 3.4vw
+						@include transform(rotate(-90deg))
 				.box03
 				.box04
 					border: 3px solid gray
-					&.green
-						border: 0
-						border: 3px solid green
-						background-color: rgba(0,255,0,.5)
+					div
+						left: -1.6vw
+						@include transform(scaleX(-1))
 				.box05
 					border: 3px solid #DBA94C
-					&.green
-						border: 0
-						border: 3px solid green
-						background-color: rgba(0,255,0,.5)
+					div
+						z-index: 1
+						left: -1.95vw
 				.box06
 					border: 3px solid gray
-					&.green
-						border: 0
-						border: 3px solid green
-						background-color: rgba(0,255,0,.5)
+					div
+						left: -1.6vw
 				.box07
 				.box08
 					border: 3px solid gray
-					&.green
-						border: 0
-						border: 3px solid green
-						background-color: rgba(0,255,0,.5)
+					div
+						top: 4.85vw
+						left: 3.4vw
+						@include transform(rotate(90deg))
 				.box09
 			.game_number_box
 				display: none
 				//display: grid
 				grid-template-columns: 10vw 10vw 10vw 10vw
 				grid-template-rows: 40vw
-				.number_box01, .number_box02, .number_box03, .number_box04 
-					border: 3px solid gray
-				.number_box03
-					margin-left: .5em
+				@include mayascript
+				.droppable
+					position: relative
+					&.completed
+						border-color: transparent !important
+					div
+						position: absolute
+						font-size: 33.3vw
+						top: -3.4vw
+						left: 1.5vw
+						&.zero
+							margin-left: -.05em
 					&.green
 						border: 0
 						border: 3px solid green
-						background-color: rgba(0,255,0,.5)
-
+						//background-color: rgba(0,255,0,.5)
+					&.red
+						border: 0
+						border: 3px solid red
+						//background-color: rgba(255,0,0,.5)
+				.number_box01, .number_box02, .number_box03, .number_box04 
+					border: 3px solid gray
+				.number_box03
+					//margin-left: .5em
+						
 
 		&.glyphs_column
 			z-index: 100
-			overflow-y: auto
+			user-select: none
+			//overflow-x: visible
+			//overflow-y: auto
 			width: 23%
 			background-color: #443a34 
 			border-left: 2px solid black
 			.arrow
 				display: none
+				span
+					user-select: none
 			.glyphs
 				width: 100%
 				.minus
@@ -208,17 +300,25 @@
 						.number
 
 
-@media (max-width: 1366px)
+@media (max-width: $breakpoint-desktop)
 	
 	.game_content
 		.column
 			&.info_column
 				padding: 4em 0 0 5em
+				.glyph_slide
+					.slide_arrows
+						margin-left: -1.2vw
+
 			&.game_column
 				.game_main_box
 					margin: 9vh 0
 				.game_number_box
 					margin: 11vh 0
+					.droppable
+						div
+							top: -3.5vw
+	
 			&.glyphs_column
 				width: 20%
 				.arrow
@@ -227,6 +327,8 @@
 					.principal_sign
 						.principal_title
 						.principal_elements
+							padding: .3em
+							padding-right: 0
 							font-size: calc(4.2vw + .5em)
 							.sign
 								padding-right: 0.2em
@@ -235,7 +337,9 @@
 							.title_text
 								.light
 						.others_elements
-							font-size: calc(3.6vw + .5em)
+							padding: .3em
+							padding-right: 0
+							font-size: calc(3.6vw + 1em)
 							.sign
 								padding-right: 0.2em
 					.numbers
@@ -245,25 +349,53 @@
 							.number
 
 
-@media (max-width: 1024px) and (orientation: portrait)
+@media (max-width: $breakpoint-tabletXL) and (orientation: portrait)
 
 	.game_content
 		.column
 			&.info_column
-				width: 37%
+				width: 32%
 				padding: 4em 0 0 4em
 				.column_introduction
 				.column_main_title
 				.column_description
 				.glyph_slide
 					.glyph_box
-						grid-template-columns: 3.5vh 10.5vh 3.5vh
-						grid-template-rows: 3.5vh 10.5vh 3.5vh
+						grid-template-columns: 4.5vh 9vh 4.5vh
+						grid-template-rows: 4.5vh 9vh 4.5vh
+						.glyph_boxx
+							div
+								font-size: 19vw
+								top: 6vw
+							&.glyph_box02
+								div
+									top: 2.9vw
+									left: 1.96vw
+							&.glyph_box04
+								div
+									left: -.95vw
+							&.glyph_box05
+								div
+									left: -1.05vw
+							&.glyph_box06
+								div
+									left: -.95vw
+							&.glyph_box08
+								div
+									top: 2.9vw
+									left: 1.96vw
 					.number_box
-						grid-template-columns: 6vw 6vw 6vw 6vw
-						grid-template-rows: 23vw
+						grid-template-columns: 4.5vh 4.5vh 4.5vh 4.5vh
+						grid-template-rows: 18vh
+						.n_box
+							div
+								font-size: 19.9vw
+								line-height: 0
+								top: 11.9vw
+								left: 1vw
 					.slide_arrows
-						margin-left: -4em
+						margin-top: .5em
+						margin-left: -1.1em
 					.glyph_title
 					.glyph_description
 
@@ -271,11 +403,40 @@
 			&.game_column
 				width: 60%
 				.game_main_box
-					grid-template-columns: 8vh 24vh 8vh
-					grid-template-rows: 8vh 24vh 8vh
+					grid-template-columns: 10vh 20vh 10vh
+					grid-template-rows: 10vh 20vh 10vh
+					.droppable
+						font-size: 42.5vw
+					.box02, .box04, .box05, .box06, .box08
+						div
+							top: 13.1vw
+					.box02
+						div
+							top: 6.4vw
+							left: 4.5vw
+					.box04
+						div
+							left: -2.2vw
+					.box05
+						div
+							left: -2.35vw
+					.box06
+						div
+							left: -2.2vw
+					.box08
+						div
+							top: 6.4vw
+							left: 4.5vw
 				.game_number_box
-					grid-template-columns: 11vw 11vw 11vw 11vw
-					grid-template-rows: 45vw
+					grid-template-columns: 10vh 10vh 10vh 10vh
+					grid-template-rows: 40vh
+					.droppable
+						position: relative
+						div
+							position: absolute
+							font-size: 44vw
+							top: -4.5vw
+							left: 2vw
 
 			&.glyphs_column
 				position: fixed
@@ -291,6 +452,8 @@
 						.principal_title
 						.principal_elements
 							justify-content: center
+							padding: 0.2em 1.3em
+							font-size: calc(6.2vw + .5em)
 							.sign
 					.other_signs
 						border: 0
@@ -299,23 +462,28 @@
 								.light
 						.others_elements
 							justify-content: center
+							padding: 0.2em
+							padding-right: 0
+							font-size: calc(5.4vw + 1em)
 							.sign
 					.numbers
 						border: 0
 						.numbers_title
 						.numbers_elements
+							padding: 0.2em
 							justify-content: center
+							font-size: calc(2.5vw + 1.5vh + .5em)
 							.number
 								margin-right: 1em
 
 
-@media (max-width: 1024px) and (orientation: landscape)
+@media (max-width: $breakpoint-tabletXL) and (orientation: landscape)
 
 	.game_content
 		.column
 			&.info_column
 				padding: 4em 0 0 3em
-				width: 20%
+				width: 26%
 				.column_introduction
 				.column_main_title
 				.column_description
@@ -323,6 +491,7 @@
 					.glyph_box
 						margin: 1em 1.3em
 					.number_box
+						margin: 1em 1.3em
 					.slide_arrows
 						margin-left: -.5em
 					.glyph_title
@@ -332,8 +501,9 @@
 			&.game_column
 				margin: 0 5vw
 				.game_main_box
-					margin: 9vh -2vh
+					margin: 10.5vh -2vh
 				.game_number_box
+					margin: 10.5vh -2vh
 
 			&.glyphs_column
 				width: 25%
@@ -343,14 +513,14 @@
 					.principal_sign
 						.principal_title
 						.principal_elements
-							font-size: calc(3.8vw + .5em)
+							font-size: calc(3.8vw + .75em)
 							.sign
 					.other_signs
 						.others_title
 							.title_text
 								.light
 						.others_elements
-							font-size: calc(3.3vw + .5em)
+							font-size: calc(3.3vw + .75em)
 							.sign
 					.numbers
 						.numbers_title
@@ -359,36 +529,36 @@
 							.number
 
 
-@media (max-width: 768px)
+@media (max-width: $breakpoint-tablet)
 
 	.game_content
-		margin-top: 6vh
+		//margin-top: 6vh
+		height: calc(100vh - 6.5em)
 		.column
 			&.info_column
 				width: 33%
-				padding: 2em 0 0 2em
+				padding: 4.5em 0 0 2em
 				.column_introduction
 				.column_main_title
 				.column_description
 				.glyph_slide
 					.glyph_box
-						grid-template-columns: 4vh 12vh 4vh
-						grid-template-rows: 4vh 12vh 4vh
+						margin: 0.2em .9em
 					.number_box
-						grid-template-columns: 7vw 7vw 7vw 7vw
-						grid-template-rows: 27vw
+						margin: 0.2em .9em
 					.slide_arrows
-						margin-left: -1em
+						margin-left: -.8em
 					.glyph_title
 					.glyph_description
 
 			
 			&.game_column
 				width: 60%
+				padding-top: 4.8em
 				.game_main_box
+					margin: 11vh -.6em
 				.game_number_box
-					grid-template-columns: 13vw 13vw 13vw 13vw
-					grid-template-rows: 52vw
+					margin: 11vh -.6em
 
 
 			&.glyphs_column
@@ -399,18 +569,20 @@
 				right: 0
 				transform: translateY(23em)
 				transition: all 0.45s ease
+				border-left: 0
 				&.invisible
 					transform: translateY(0)
 					transition: all 0.45s ease
 				.arrow
-					cursor: pointer
-					color: black
 					display: flex
 					justify-content: center
-					transition: all 0.45s ease
-					&.with
-						transform: rotate(180deg)
-						transition: all 0.45s ease
+					.arroww
+						cursor: pointer
+						color: black
+						transition: transform 0.45s ease
+						&.with
+							transform: rotate(180deg)
+							transition: all 0.45s ease
 				.glyphs
 					.minus
 					.principal_sign
@@ -425,6 +597,7 @@
 								.light
 						.others_elements
 							.sign
+								padding-right: 0.1em
 					.numbers
 						border: 0
 						.numbers_title
@@ -432,6 +605,218 @@
 							.number
 
 
+@media (max-width: $breakpoint-phone) and (orientation: landscape)
+
+	.game_content
+		.column
+			&.info_column
+				width: 50%
+				padding: 6vh 0 0 3em
+				.column_introduction 
+					display: none
+				.column_main_title
+					font-size: 1.2em 	
+				.column_description
+					margin-bottom: .7em
+				.glyph_slide
+					.glyph_box, .number_box
+						margin: 0 14vh
+					.number_box
+						.n_box
+							div
+								font-size: 12vw
+								top: 7.3vw
+								left: 0.3vw
+								&.zero
+									margin-left: -.05em
+					.slide_arrows
+						font-size: .7em
+						width: 44%
+						margin: 0 6.8vw
+						margin-top: .5em
+					.glyph_title, .glyph_mayan, .glyph_trans_num, .glyph_description
+						display: none
+
+			&.game_column
+				width: 50%
+				padding-top: 0
+				margin-top: -4em
+				.game_main_box
+					margin: 0 7.5vh
+					grid-template-columns: 9vw 18vw 9vw
+					grid-template-rows: 9vw 18vw 9vw
+					.droppable
+						font-size: 29vw
+					.box02, .box04, .box05, .box06, .box08
+						div
+							top: 8.6vw
+					.box02
+						div
+							top: 4vw
+							left: 2.7vw
+					.box04
+						div
+							left: -1.7vw
+					.box05
+						div
+							left: -2.15vw
+					.box06
+						div
+							left: -1.7vw
+					.box08
+						div
+							top: 4vw
+							left: 2.7vw
+				.game_number_box
+					margin: 0 7.5vh
+					grid-template-columns: 9vw 9vw 9vw 9vw
+					grid-template-rows: 36vw
+					.droppable
+						div
+							font-size: 30vw
+							top: -3.5vw
+							left: 1vw
+
+			&.glyphs_column
+				height: 20.5em
+				transform: translateY(19.1em)
+				.arrow
+					height: 1.3em
+					span
+						&.fa-2x
+							font-size: 1.3em
+				.glyphs 
+					.principal_sign 
+						.principal_elements
+							padding: 0.2em
+							font-size: calc(6.2vw + .5em)
+							.sign
+					.other_signs
+						.others_title
+							.title_text
+								.light
+						.others_elements
+							padding: 0.2em
+							font-size: calc(4.5vw + .9em)
+
+
+@media (max-width: $breakpoint-phone) and (orientation: portrait)
+
+	.game_content
+		flex-flow: column nowrap
+		.column
+			&.info_column
+				@include flex
+				align-items: flex-start
+				justify-content: space-around
+				width: 100%
+				height: 55%
+				padding: 7vh 4vh 3vh 3vh
+				.info_column_text
+					width: 40%
+					margin-right: 1em
+					.column_introduction
+						display: none
+					.column_main_title
+						font-size: 1.2em
+					.column_description
+						font-size: .8em
+				.glyph_slide
+					.glyph_box
+						.glyph_boxx
+							div
+								font-size: 25vw
+								top: 8vw
+							&.glyph_box02
+								div
+									top: 3.9vw
+									left: 2.75vw
+							&.glyph_box04
+								div
+									left: -1.15vw
+							&.glyph_box05
+								div
+									left: -1.35vw
+							&.glyph_box06
+								div
+									left: -1.3vw
+							&.glyph_box08
+								div
+									top: 3.9vw
+									left: 2.75vw
+					.number_box
+						margin: 0
+						.n_box
+							div
+								font-size: 26vw
+								top: 16vw
+								left: 1.2vw
+			
+					.slide_arrows
+						margin-left: .15em
+						font-size: .7em
+					.glyph_box
+						margin: 0
+					.glyph_title, .glyph_mayan, .glyph_trans_num, .glyph_description
+						display: none
+
+			&.game_column
+				width: 100%
+				padding-top: 0
+				.game_main_box
+					margin: 2vh 7.5vh
+					.droppable
+						div
+							font-size: 55.5vw
+							top: 16.6vw
+							left: -3.5vw
+						&.box02
+							div
+								top: 8.1vw
+								left: 5.8vw
+						&.box04
+							div
+								left: -3vw
+						&.box05
+							div
+						&.box06
+							div
+								left: -2.8vw
+						&.box08
+							div
+								top: 8.1vw
+								left: 5.8vw
+				.game_number_box
+					margin: 2vh 7.5vh
+					.droppable
+						div
+							font-size: 59vw
+							top: -6.5vw
+							left: 2.4vw
+							&.zero
+								margin-left: -.05em
+
+			&.glyphs_column
+				height: 16.8em
+				transform: translateY(15.4em)
+				.arrow
+					height: 1.3em
+					span
+						&.fa-2x
+							font-size: 1.3em
+				.glyphs 
+					.principal_sign 
+						.principal_elements
+							padding: 0.2em
+							font-size: calc(6.2vw + .5em)
+							.sign
+					.other_signs
+						.others_title
+							.title_text
+								.light
+						.others_elements
+							padding: 0.2em
+							font-size: calc(4.5vw + .9em)
 
 
 

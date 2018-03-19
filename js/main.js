@@ -100,7 +100,7 @@ var copyright = $("<div class='copyright'></div>");
 var copyright_text = $("<p>Copyright</p>");
 var social_media = $("<div class='social_media'></div>");
 var american_museum = $("<div class='american_museum'></div>");
-var logo_am = $("<img src='img/museoamerica.png' width='128px' height='23px' alt='logo museo america'>");
+var logo_am = $("<a href='http://www.mecd.gob.es/museodeamerica/el-museo.html' target='_blank'><img src='img/museoamerica.png' width='128px' height='23px' alt='logo museo america'></a>");
 
 footer.append(footer_content);
 footer_content.append(copyright);
@@ -108,20 +108,6 @@ copyright.append(copyright_text);
 footer_content.append(social_media);
 footer_content.append(american_museum);
 american_museum.append(logo_am);
-
-// Function: Drag & Drop jQuery
-$( function() {
-    $( ".draggable" ).draggable();
-    $( ".droppable" ).droppable({
-      drop: function( event, ui ) {
-        $( this )
-          .addClass( "ui-state-highlight" )
-          .find( "p" )
-            .html( "Dropped!" );
-      }
-    });
-  } );
-
 
 
 var part = $('.main_content_info > div');

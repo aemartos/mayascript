@@ -272,41 +272,35 @@ footer
 	height: 3.5em
 	background-color: #dba94c
 	color: black
-	//display: flex
-	//margin-top: 20px
-	//flex-shrink: 0
 	font-size: 12px
 	&.typo
 		margin-top: 0px
 	.footer_content
 		display: flex
-		justify-content: center
+		justify-content: space-around
 		align-items: center
 		width: calc(100% - 120px)
-		padding: 0 60px
+		margin: 0 auto
 		div
 			width: calc(100%/3)
 		div.american_museum
 			text-align: right
 
-$breakpoint-tablet: 768px
-$breakpoint-phone: 600px
-$breakpoint-desktop: 1024px
-$breakpoint-small: 360px
 
-@media (max-width: breakpoint-desktop)
+
+@media (max-width: $breakpoint-tabletXL)
 	main
 		padding: 0 40px
 
 
-@media (min-width: breakpoint-phone) and (max-width: breakpoint-tablet)
+@media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet)
 	main
 		.main_translator_content
 			.translator_spanish, .translator_mayan
 				width: 45%
 
 
-@media (max-width: breakpoint-phone)
+@media (max-width: $breakpoint-phone)
 	main
 		padding: 0 40px
 		.main_translator_content
@@ -317,9 +311,24 @@ $breakpoint-small: 360px
 			margin-bottom: 30px
 			p.description
 				display: none
+				
+	header
+		div
+			padding: 0
+			p
+				font-size: .8em
+				margin: .7em
+	footer
+		height: 3em
+		font-size: .7em
+		p
+			margin: .95em
+		img
+			margin-top: .3em
 
 
-@media (max-width: breakpoint-small)
+
+@media (max-width: $breakpoint-small)
 	main
 		.main_translator_content
 			margin: 0

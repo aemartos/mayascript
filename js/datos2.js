@@ -3,143 +3,147 @@ data_syl_game = [
 
 {
 	"index": 01,
-	"spanish": "hueso, esqueleto",
+	"spanish": "Hueso, esqueleto",
 	"mayan": "ba-ki",
 	"transcription": "baak",
-	"description": "(1) inalienablemente poseído, (2) “cautivo” atrapado en guerra",
-	"syllables": {
-		"syl01": "",
-		"syl02": "",
-		"syl03": "ba prin",
-		"syl04": "ki",
-		"syl05": ""
-		}
+	"description": "(1) Inalienablemente poseído, (2) “cautivo” atrapado en guerra",
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"syllables": [
+		"",
+		"",
+		"ba",
+		"ki",
+		""
+		]
 },
 {
 	"index": 02,
-	"spanish": "yelmo, tocado",
+	"spanish": "Yelmo, tocado",
 	"mayan": "ko-ha-wa",
 	"transcription": "kohaw / ko’haw",
 	"description": "Particularmente los yelmos de placas de concha provenientes de Teotihuacan",
-	"syllables": {
-		"syl01": "",
-		"syl02": "ko",
-		"syl03": "ha prin",
-		"syl04": "wa",
-		"syl05": ""
-		}
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"syllables": [
+		"",
+		"ko",
+		"ha",
+		"wa",
+		""
+		]
 },
 {
 	"index": 03,
-	"spanish": "guardián, cuidador, protector",
+	"spanish": "Guardián, cuidador, protector",
 	"mayan": "ko-ko-no-ma",
 	"transcription": "ko[h]knom",
 	"description": "Usado en referencias específicas en relación con las deidades patronas de Copan",
-	"syllables": {
-		"syl01": "ko",
-		"syl02": "ko",
-		"syl03": "no prin",
-		"syl04": "ma_o",
-		"syl05": ""
-		}
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"syllables": [
+		"ko",
+		"ko",
+		"no",
+		"ma_o",
+		""
+		]
 },
 {
 	"index": 04,
-	"spanish": "amarrar, atar, anudar",
+	"spanish": "Amarrar, atar, anudar",
 	"mayan": "u-k'a-cha-wa",
 	"transcription": "u-kach-aw",
 	"description":"",
-	"syllables": {
-		"syl01": "",
-		"syl02": "u",
-		"syl03": "kaa prin",
-		"syl04": "cha_o",
-		"syl05": "wa"
-		}
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"syllables": [
+		"",
+		"u",
+		"kaa",
+		"cha_o",
+		"wa"
+		]
 },
 {
 	"index": 05,
-	"spanish": "",
+	"spanish": "No existe traducción al español",
 	"mayan": "ye-ma-la",
 	"transcription": "y-e[h]m-al",
 	"description": "",
-	"syllables": {
-		"syl01": "",
-		"syl02": "",
-		"syl03": "ye prin",
-		"syl04": "ma_o",
-		"syl05": "la_o"
-		}
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"syllables": [
+		"",
+		"",
+		"ye",
+		"ma_o",
+		"la_o"
+		]
 },
 {
 	"index": 06,
-	"spanish": "regalo, presente",
+	"spanish": "Regalo, presente",
 	"mayan": "(y)a-k’u-tu-u",
 	"transcription": "(y)a[h]k’tu’, (y)a[h]k’utu’",
-	"description": "lit. “cosa para dar”",
-	"syllables": {
-		"syl01": "",
-		"syl02": "ya",
-		"syl03": "ku prin",
-		"syl04": "tu",
-		"syl05": "u"
-		}
+	"description": "lit. “Cosa para dar”",
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"syllables": [
+		"",
+		"ya",
+		"ku",
+		"tu",
+		"u"
+  	]
 },
 {
 	"index": 07,
-	"spanish": "lluvia",
+	"spanish": "Lluvia",
 	"mayan": "cha-ki",
 	"transcription": "Cha[h]k",
-	"description": "teónimo para el dios B",
-	"syllables": {
-		"syl01": "",
-		"syl02": "",
-		"syl03": "cha_p prin",
-		"syl04": "ki",
-		"syl05": ""
-		}
+	"description": "Teónimo para el dios B",
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"syllables": [
+		"",
+		"",
+		"cha_p",
+		"ki",
+		""
+		]
 },
 {
 	"index": 08,
-	"spanish": "cielo, serpiente, cuatro",
+	"spanish": "Cielo, serpiente, cuatro",
 	"mayan": "cha-na",
-	"transcription": "chan kan",
+	"transcription": "chan, kan",
 	"description": "",
-	"syllables": {
-		"syl01": "",
-		"syl02": "",
-		"syl03": "cha_p prin",
-		"syl04": "na_o1",
-		"syl05": ""
-		}
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"syllables": [
+		"",
+		"",
+		"cha_p",
+		"na_o1",
+		""
+		]
 },
 {
 	"index": 09,
-	"spanish": "ciempiés",
+	"spanish": "Ciempiés",
 	"mayan": "cha-pa-ta",
 	"transcription": "chapa[’h]t, chapa[ah]t, chapa[h]t, chapat",
-	"description": "comúnmente se refiere a figuras sobrenaturales que presentan atributos relacionados con el ciempiés",
-	"syllables": {
-		"syl01": "",
-		"syl02": "cha_o",
-		"syl03": "pa prin",
-		"syl04": "ta",
-		"syl05": ""
-		}
+	"description": "Comúnmente se refiere a figuras sobrenaturales que presentan atributos relacionados con el ciempiés",
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"syllables": [
+		"",
+		"cha_o",
+		"pa",
+		"ta",
+		""
+		]
 },
 {
 	"index": 10,
-	"spanish": "“(hombre) joven, varón",
+	"spanish": "(Hombre) joven, varón",
 	"mayan": "ch’a-ho-ma",
 	"transcription": "ch’ahom",
 	"description": "",
-	"syllables": {
-		"syl01": "",
-		"syl02": "chaa",
-		"syl03": "ho prin",
-		"syl04": "ma_o",
-		"syl05": ""
-		}
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"syllables": ["", "chaa", "ho", "ma_o", ""]
 },
 
 ];
@@ -150,78 +154,57 @@ data_num_game = [
 {
 	"index" : 01,
 	"num": 129,
-	"spanish" :"",
+	"spanish" :"Ciento veintinueve",
 	"mayan" :"",
 	"description":"",
-	"numbers" : {
-		"num01" : "1",
-		"num02" : "5",
-		"num03" : "4",
-		"num04" : "5",
-		}
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"numbers" : ["one","five","four","five"]
 },
 
 {
 	"index" : 02,
 	"num": 147,
-	"spanish" :"",
+	"spanish" :"Ciento cuarenta y siete",
 	"mayan" :"",
 	"description":"",
-	"numbers" : {
-		"num01" : "2",
-		"num02" : "5",
-		"num03" : "2",
-		"num04" : "5",
-		}
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"numbers" : ["two","five","two","five"]
 },
 
 {
 	"index" : 03,
 	"num": 160,
-	"spanish" :"",
+	"spanish" :"Ciento sesenta",
 	"mayan" :"",
 	"description":"",
-	"numbers" : {
-		"num01" : "3",
-		"num02" : "5",
-		"num03" : "6",
-		"num04" : "",
-		}
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"numbers" : ["three","five","zero",""]
 },
 
 {
 	"index" : 04,
 	"num": 184,
-	"spanish" :"",
+	"spanish" :"Ciento ochenta y cuatro",
 	"mayan" :"",
 	"description":"",
-	"numbers" : {
-		"num01" : "4",
-		"num02" : "5",
-		"num03" : "4",
-		"num04" : "",
-		}
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"numbers" : ["four","five","four",""]
 },
 
 {
 	"index" : 05,
 	"num": 205,
-	"spanish" :"doscientos cinco",
+	"spanish" :"Doscientos cinco",
 	"mayan" :"",
 	"description":"",
-	"numbers" : {
-		"num01" : "5",
-		"num02" : "5",
-		"num03" : "5",
-		"num04" : "",
-		}
+	"modalInfo": "sfdfgsdgsdfgsd",
+	"numbers" : ["five","five","five",""]
 },
 
 ];
 
 
-data_syl = [
-	{
+data_syl = 	{
 	"pa":"A",
 	"ba": "a",
 	"no": "S",
@@ -273,6 +256,6 @@ data_syl = [
 	"three": "3",
 	"four": "4",
 	"five": "5",
-	"zero": "6"
-	}
-];
+	"zero": "6",
+	"":""
+	};

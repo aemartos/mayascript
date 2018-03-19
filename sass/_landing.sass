@@ -1,0 +1,32 @@
+
+
+.landing_content
+  @include flex
+  flex-flow: column nowrap
+  justify-content: center
+  width: 75%
+  @include center
+  font-size: calc(.7vw + .7vh + .4em)
+  .landing_text
+    .landing_paragraph
+  .landing_title
+    .landing_title_intro
+      margin-bottom: .3em
+    .landing_title_mayascript
+      font-weight: 700
+      font-size: calc(3.5vw + 1.5vh + 1.5em)
+      margin: 0
+    .button_center
+      text-align: center
+      .button_start
+        display: inline-block
+        text-decoration: none
+        color: white
+        padding: .5em
+        margin-top: 1em
+        border: 2px solid white
+        @include transition (all 0.2s ease)
+        &:hover
+          color: black
+          background-color: white
+          @include hover-scale

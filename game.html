@@ -13,7 +13,8 @@
       <link rel="stylesheet" href="css/normalize.min.css">
       <link rel="stylesheet" href="css/styles.css">
       <link rel="stylesheet" href="css/font-awesome.css">
-
+      <link rel="stylesheet" href="css/remodal.css">
+      <link rel="stylesheet" href="css/remodal-default-theme.css">
       <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
   <body>
@@ -27,61 +28,64 @@
       <div class="game_content">
 
         <div class="column info_column">
-          <p class="column_introduction">Construye y aprende con</p>
-          <div class="column_main_title">Maya_Script</div>
-          <p class="column_description">Arrastra los glifos de la derecha para formar el dibujo maya que se muestra a continuación</p>
+          <div class="info_column_text">
+            <p class="column_introduction">Construye y aprende con</p>
+            <div class="column_main_title">Maya_Script</div>
+            <p class="column_description">Arrastra los glifos de la derecha para formar el dibujo maya que se muestra</p>
+          </div>
           
           <div class="glyph_slide">
             <div class="glyph_box">
-              <div class="glyph_box01"></div>
-              <div class="glyph_box02"></div>
-              <div class="glyph_box03"></div>
-              <div class="glyph_box04"></div>
-              <div class="glyph_box05"></div>
-              <div class="glyph_box06"></div>
-              <div class="glyph_box07"></div>
-              <div class="glyph_box08"></div>
-              <div class="glyph_box09"></div>
+              <div class="glyph_boxx glyph_box01"></div>
+              <div class="glyph_boxx glyph_box02"></div>
+              <div class="glyph_boxx glyph_box03"></div>
+              <div class="glyph_boxx glyph_box04"></div>
+              <div class="glyph_boxx glyph_box05"></div>
+              <div class="glyph_boxx glyph_box06"></div>
+              <div class="glyph_boxx glyph_box07"></div>
+              <div class="glyph_boxx glyph_box08"></div>
+              <div class="glyph_boxx glyph_box09"></div>
             </div>
-
             <div class="number_box">
-              <div class="droppable n_box01"></div>
-              <div class="droppable n_box02"></div>
-              <div class="droppable n_box03"></div>
-              <div class="droppable n_box04"></div>
+              <div class="n_box n_box01"></div>
+              <div class="n_box n_box02"></div>
+              <div class="n_box n_box03"></div>
+              <div class="n_box n_box04"></div>
             </div>
 
             <div class="slide_arrows">
-              <div class="fa fa-2x fa-angle-left"></div>
-              <div class="fa fa-2x fa-angle-right"></div>
+              <div id="arrow_left" class="fa fa-2x fa-angle-left"></div>
+              <div id="arrow_right" class="fa fa-2x fa-angle-right"></div>
             </div>
             <div class="glyph_title">Dios de la tierra</div>
+            <div class="glyph_mayan">ja</div>
+            <div class="glyph_trans_num">juruja</div>
             <div class="glyph_description">Lorem fistrum ese que llega fistro hasta luego Lucas me cago en tus muelas apetecan qué dise usteer te va a hasé pupitaa la caidita. Quietooor me cago en tus muelas no te digo trigo por no llamarte Rodrigor.</div>
           </div>
 
 
 
         </div>
-
+       
         <div class="column game_column">
 
           <div class="game_main_box">
             <div class="box01"></div>
-            <div class="droppable box02"></div>
+            <div data-index="0" class="droppable box02"></div>
             <div class="box03"></div>
-            <div class="droppable box04"></div>
-            <div class="droppable box05"></div>
-            <div class="droppable box06"></div>
+            <div data-index="1" class="droppable box04"></div>
+            <div data-index="2" class="droppable box05"></div>
+            <div data-index="3" class="droppable box06"></div>
             <div class="box07"></div>
-            <div class="droppable box08"></div>
+            <div data-index="4" class="droppable box08"></div>
             <div class="box09"></div>
           </div>
 
           <div class="game_number_box">
-            <div class="droppable number_box01"></div>
-            <div class="droppable number_box02"></div>
-            <div class="droppable number_box03"></div>
-            <div class="droppable number_box04"></div>
+            <div data-index="0" class="droppable number_box01">1</div>
+            <div data-index="1" class="droppable number_box02">4</div>
+            <div data-index="2" class="droppable number_box03">5</div>
+            <div data-index="3" class="droppable number_box04">0</div>
           </div>
           
         </div>
@@ -89,7 +93,7 @@
 
         <div class="column glyphs_column">
           
-          <div class="arrow fa fa-2x fa-angle-up side"></div>
+          <div class="arrow"> <span class="arroww fa fa-2x fa-angle-up side"></span></div>
           <div class="glyphs">
             <div class="principal_sign">
               <div class="principal_title">
@@ -100,22 +104,22 @@
                 <span class="draggable sign pa">A</span>
                 <span class="draggable sign ba">a</span>
                 <span class="draggable sign no">S</span>
-                <span class="draggable sign ma">s</span>
+                <span class="draggable sign ma_p">s</span>
                 <span class="draggable sign chu">D</span>
                 <span class="draggable sign bi">d</span>
                 <span class="draggable sign lu">F</span>
                 <span class="draggable sign e">f</span>
                 <span class="draggable sign ha">G</span>
-                <span class="draggable sign la">g</span>
+                <span class="draggable sign la_p">g</span>
                 <span class="draggable sign kee">H</span>
                 <span class="draggable sign ku">h</span>
                 <span class="draggable sign hu">J</span>
                 <span class="draggable sign kaa">j</span>
-                <span class="draggable sign cho">K</span>
+                <span class="draggable sign choo">K</span>
                 <span class="draggable sign ho">k</span>
-                <span class="draggable sign ka">L</span>
-                <span class="draggable sign cha">l</span>
-                <span class="draggable sign a">Ñ</span>
+                <span class="draggable sign ka_p">L</span>
+                <span class="draggable sign cha_p">l</span>
+                <span class="draggable sign a_p">Ñ</span>
                 <span class="draggable sign ye">ñ</span>
                 <span class="draggable sign li">´</span>
                 <span class="draggable sign ke">¨</span>
@@ -135,14 +139,14 @@
                 <span class="draggable sign ki">r</span>
                 <span class="draggable sign tzi">t</span>
                 <span class="draggable sign ni">y</span>
-                <span class="draggable sign ka">u</span>
-                <span class="draggable sign ma">i</span>
-                <span class="draggable sign la">o</span>
-                <span class="draggable sign a">p</span>
-                <span class="draggable sign cha">`</span>
-                <span class="draggable sign na">+</span>
+                <span class="draggable sign ka_o">u</span>
+                <span class="draggable sign ma_o">i</span>
+                <span class="draggable sign la_o">o</span>
+                <span class="draggable sign a_o">p</span>
+                <span class="draggable sign cha_o">`</span>
+                <span class="draggable sign na_o1">+</span>
                 <span class="draggable sign tu"><</span>
-                <span class="draggable sign cha">z</span>
+                <span class="draggable sign chaa">z</span>
                 <span class="draggable sign mi">x</span>
                 <span class="draggable sign ko">c</span>
                 <span class="draggable sign bu">v</span>
@@ -151,7 +155,7 @@
                 <span class="draggable sign tza">m</span>
                 <span class="draggable sign cho">,</span>
                 <span class="draggable sign u">.</span>
-                <span class="draggable sign na">-</span>
+                <span class="draggable sign na_o2">-</span>
               </div>
             </div>
 
@@ -175,15 +179,24 @@
 
       </div>
 
-     
+     <div class="remodal" data-remodal-id="modal"
+        data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h2 class="modalHeader">¡Enhorabuena! Has completado el jeroglífico maya</h2>
+        <br>
+        <div id="modalContent"></div>
+      </div>
 
 
     <footer></footer>
 
 		<script src="js/vendor/jquery-1.11.2.min.js"></script>
 		<script src="js/vendor/jquery-ui.min.js"></script>
+    <script src="js/vendor/remodal.min.js"></script>
 		<script src="js/datos.js"></script>
     <script src="js/datos2.js"></script>
+    <script src="js/touchFix.js"></script>
     <script src="js/game.js"></script>
 		<script src="js/main.js"></script>
   </body>

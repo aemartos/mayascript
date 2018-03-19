@@ -9,6 +9,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=latin-ext')
 
 
+$breakpoint-desktop: 1366px
+$breakpoint-tabletXL: 1024px
+$breakpoint-tablet: 768px
+$breakpoint-phone: 640px
+$breakpoint-small: 360px
+
+
 @mixin flex
   display: flex
   flex-flow: row nowrap
@@ -19,13 +26,77 @@
   flex-flow: row wrap
   align-items: center
 
-
 @mixin mayascript
   font-family: 'mayascript'
   font-kerning: normal
 
+@mixin hover-opacity
+  opacity: .5
+  @include transform (scale(1.5))
+  @include transition (all 0.2s ease)
 
-$breakpoint-desktop: 1024px
-$breakpoint-tablet: 768px
-$breakpoint-phone: 600px
-$breakpoint-small: 360px
+@mixin hover-scale
+  @include transform (scale(1.1))
+  @include transition (all 0.2s ease)
+
+@mixin center
+  position: absolute
+  left: 50%
+  top: 50%
+  @include transform (translate(-50%, -50%))
+
+//----------- GENERAL MIXINS ------------
+
+@mixin box-sizing ($box)
+  -webkit-box-sizing: $box
+  -moz-box-sizing: $box
+  -ms-box-sizing: $box
+  -o-box-sizing: $box
+  box-sizing: $box
+
+@mixin user-select ($value: none)
+  -webkit-user-select: $value
+  -moz-user-select: $value
+  -ms-user-select: $value
+  -o-user-select: $value
+  user-select: $value
+
+@mixin transition ($value)
+  transition: $value
+  -webkit-transition: $value
+  -moz-transition: $value
+  -ms-transition: $value
+  -o-transition: $value
+
+@mixin transform ($value)
+  -webkit-transform: $value
+  -moz-transform: $value
+  -ms-transform: $value
+  -o-transform: $value
+  transform: $value
+
+@mixin transform-origin ($value)
+  -webkit-transform-origin: $value
+  -moz-transform-origin: $value
+  -ms-transform-origin: $value
+  -o-transform-origin: $value
+  transform-origin: $value
+
+@mixin text-stroke ($box)
+  -webkit-text-stroke: $box
+  -moz-text-stroke: $box
+  -ms-text-stroke: $box
+  -o-text-stroke: $box
+  text-stroke: $box
+
+@mixin box-shadow ($box)
+  -webkit-box-shadow: $box
+  -moz-box-shadow: $box
+  -ms-box-shadow: $box
+  -o-box-shadow: $box
+  box-shadow: $box
+
+
+
+
+
