@@ -39,7 +39,6 @@ header {
 
 main {
   max-width: 100%;
-  padding: 0 120px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -51,8 +50,9 @@ main {
     flex-direction: column;
     align-items: center; }
   main.typo {
-    padding: 0;
-    padding-left: 60px; }
+    padding: 0; }
+  main .title_p {
+    font-size: 1.8em !important; }
   main .main_content {
     width: 100%;
     height: calc(100vh - 6.5em);
@@ -65,7 +65,7 @@ main {
       position: relative; }
       main .main_content .main_content_title .fa-question-circle {
         position: absolute;
-        bottom: 0; }
+        bottom: 4em; }
         main .main_content .main_content_title .fa-question-circle:hover {
           color: #ed4747;
           cursor: pointer; }
@@ -73,8 +73,8 @@ main {
       width: calc(70% - 40px);
       height: auto;
       display: grid;
-      grid-template-columns: 20% 20% 20% 20%;
-      padding: 20px; }
+      grid-template-columns: 25% 25% 25% 25%;
+      padding: 5em; }
       main .main_content .main_content_info div {
         padding: 20px 0;
         background-position: center;
@@ -177,6 +177,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    flex-direction: column;
     position: fixed;
     z-index: -200;
     left: calc(100vw - 20%);
@@ -186,15 +187,14 @@ main {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      width: 100%;
       height: 30%;
       margin-top: 30px !important; }
     main .sidebar_content .syllabic {
-      width: 100%; }
+      padding: 0.4em; }
     main .sidebar_content .meaning {
-      width: 100%; }
+      padding: 0.4em; }
     main .sidebar_content .description {
-      width: 100%;
+      padding: 0.4em;
       font-size: 12px; }
     main .sidebar_content .image_detail, main .sidebar_content .syllabic, main .sidebar_content .meaning, main .sidebar_content .description {
       margin: 0 35px; }
@@ -206,8 +206,9 @@ main {
   main .main_transalor_title, main .main_content_title {
     width: 100%;
     color: white;
-    margin-top: 40px;
-    margin-bottom: 40px; }
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 4em 0em 4em 5em; }
     main .main_transalor_title h1, main .main_content_title h1 {
       margin: 0;
       font-weight: 700; }
@@ -283,11 +284,17 @@ footer {
   height: auto; }
 
 @media (max-width: 1366px) {
-  main {
-    padding: 0; }
-    main .main_content .main_content_title {
-      padding: 4em 4em 4em 5em;
-      margin: 0; } }
+  main.typography {
+    padding: 4em 4em 4em 5em; }
+    main.typography .main_transalor_title {
+      padding: 0; }
+  main .main_content .main_content_title {
+    padding: 8em 0em 4em 5em;
+    margin: 0; }
+    main .main_content .main_content_title p {
+      margin-top: 0; }
+  main .main_content .main_content_info {
+    padding: 4em 2em 2em 2.5em; } }
 @media (max-width: 1024px) and (orientation: portrait) {
   main.row .main_content {
     flex-direction: column; }
@@ -296,15 +303,25 @@ footer {
       width: 100%;
       padding: 4em;
       margin: 0; }
+      main.row .main_content .main_content_title .fa-question-circle {
+        position: absolute;
+        bottom: 0.2em;
+        right: 3em; }
     main.row .main_content .main_content_info {
       height: 75%;
       width: 100%;
       padding: 4em; }
       main.row .main_content .main_content_info .grid_item_9, main.row .main_content .main_content_info .grid_item_10 {
-        height: 40vw !important; } }
+        height: 40vw !important; }
+    main.row .main_content .main_content_info_typo {
+      height: 70%;
+      width: 100%; }
+
+  main.row.typo {
+    padding: 0; } }
 @media (max-width: 1024px) and (orientation: landscape) {
   main .main_content .main_content_title {
-    padding: 4em 4em 4em 5em;
+    padding: 8em 0em 4em 5em;
     margin: 0; } }
 @media (max-width: 768px) {
   main .main_translator_content .translator_spanish, main .main_translator_content .translator_mayan {
@@ -313,12 +330,10 @@ footer {
   main.row {
     padding: 0; }
     main.row .main_content_title {
-      padding: 3em 3em 3em 2em;
-      width: 50%;
+      width: 30%;
       margin: 0; }
     main.row .main_content_info {
-      width: 50%;
-      padding: 3em 3em 3em 2em; }
+      width: 70%; }
       main.row .main_content_info .grid_item_9, main.row .main_content_info .grid_item_10 {
         height: 24vw; } }
 @media (max-width: 640px) and (orientation: landscape) {
@@ -403,7 +418,8 @@ footer {
       width: 22%;
       padding: 4em 0 0 7em; }
       .game_content .column.info_column .column_introduction {
-        margin-bottom: 0.3em; }
+        margin-bottom: 0.3em;
+        font-size: 1.8em; }
       .game_content .column.info_column .column_main_title {
         margin: 0;
         font-size: 2em;
@@ -694,7 +710,7 @@ footer {
           font-weight: 500;
           font-size: 0.9em;
           padding: 0.3em;
-          background-color: #E56871; }
+          background-color: #af3434; }
         .game_content .column.glyphs_column .glyphs .numbers .numbers_elements {
           padding: 0.4em;
           padding-right: 0;

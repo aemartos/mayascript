@@ -77,6 +77,8 @@ textarea {
     -o-transform: scale(0.95);
     -ms-transform: scale(0.95);
     transform: scale(0.95);
+    color: black;
+    background-color: white !important; 
 }
 
 .capsLockOn {

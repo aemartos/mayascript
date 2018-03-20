@@ -33,7 +33,7 @@ header
 		color: black
 main
 	max-width: 100%
-	padding: 0 120px
+	// padding: 0 120px
 	display: flex
 	flex-wrap: wrap
 	justify-content: center
@@ -46,7 +46,9 @@ main
 		align-items: center
 	&.typo
 		padding: 0
-		padding-left: 60px
+	& .title_p
+		font-size: 1.8em !important
+
 	.main_content
 		width: 100%
 		height: calc(100vh - 6.5em)
@@ -60,7 +62,7 @@ main
 			position: relative
 			& .fa-question-circle
 				position: absolute
-				bottom: 0
+				bottom: 4em
 				&:hover
 					color: #ed4747
 					cursor: pointer
@@ -71,8 +73,8 @@ main
 			height: auto
 			display: grid
 			//grid-gap: 10px
-			grid-template-columns: 20% 20% 20% 20%
-			padding: 20px
+			grid-template-columns: 25% 25% 25% 25%
+			padding: 5em
 			div
 				//background-color: #b2aeab
 				padding: 20px 0
@@ -181,6 +183,7 @@ main
 		display: flex
 		flex-wrap: wrap
 		justify-content: flex-start
+		flex-direction: column
 		position: fixed
 		z-index: -200
 		left: calc(100vw - 20%)
@@ -191,15 +194,14 @@ main
 			background-position: center
 			background-repeat: no-repeat
 			background-size: contain
-			width: 100%
 			height: 30%
 			margin-top: 30px !important
 		.syllabic
-			width: 100%
+			padding: 0.4em
 		.meaning
-			width: 100%
+			padding: 0.4em
 		.description
-			width: 100%
+			padding: 0.4em
 			font-size: 12px
 		.image_detail, .syllabic, .meaning, .description
 			margin: 0 35px
@@ -213,8 +215,9 @@ main
 	.main_transalor_title, .main_content_title
 		width: 100%
 		color: white
-		margin-top: 40px
-		margin-bottom: 40px
+		margin-top: 20px
+		margin-bottom: 20px
+		padding: 4em 0em 4em 5em
 		h1
 			margin: 0
 			font-weight: 700
@@ -296,11 +299,19 @@ footer
 
 @media (max-width: $breakpoint-desktop)
 	main
-		padding: 0
+		&.typography
+			padding: 4em 4em 4em 5em
+			.main_transalor_title
+				padding: 0
 		.main_content
 			.main_content_title
-				padding: 4em 4em 4em 5em
+				padding: 8em 0em 4em 5em
 				margin: 0
+				p
+					margin-top: 0
+			.main_content_info
+				padding: 4em 2em 2em 2.5em
+
 @media (max-width: $breakpoint-tabletXL) and (orientation: portrait)
 		main.row
 			.main_content
@@ -310,18 +321,27 @@ footer
 					width: 100%
 					padding: 4em
 					margin: 0
+					& .fa-question-circle
+						position: absolute
+						bottom: 0.2em
+						right: 3em
 				.main_content_info
 					height: 75%
 					width: 100%
 					padding: 4em
 					.grid_item_9, .grid_item_10
 						height: 40vw 	!important
+				.main_content_info_typo
+						height: 70%
+						width: 100%
+		main.row.typo
+			padding: 0
 
 @media (max-width: $breakpoint-tabletXL) and (orientation: landscape)
 		main
 			.main_content
 				.main_content_title
-					padding: 4em 4em 4em 5em
+					padding: 8em 0em 4em 5em
 					margin: 0
 @media (max-width: $breakpoint-tablet)
 	main
@@ -331,12 +351,12 @@ footer
 	main.row
 		padding: 0
 		.main_content_title
-			padding: 3em 3em 3em 2em
-			width: 50%
+			// padding: 3em 3em 3em 2em
+			width: 30%
 			margin: 0
 		.main_content_info
-			width: 50%
-			padding: 3em 3em 3em 2em
+			width: 70%
+			// padding: 3em 3em 3em 2em
 			.grid_item_9, .grid_item_10
 				height: 24vw
 

@@ -113,6 +113,9 @@ american_museum.append(logo_am);
 var part = $('.main_content_info > div');
 var img_path ,img_hover_name;
 var img_detail = $('main .sidebar_content .image_detail');
+var syllabic = $('main .sidebar_content .syllabic p strong');
+var meaning = $('main .sidebar_content .meaning h4');
+var description_codex = $('main .sidebar_content .description p');
 part.hover(
   function(ev) {
     img_path = $(this).css("background-image").split('/');
@@ -126,6 +129,13 @@ part.hover(
 // Function lo select a glif from the codice
 part.on('click', function(ev) {
   img_detail.css('background-image', $(this).css('background-image'));
+  var position = $(this).attr('class');
+  var codex_i = position.substr(position.length - 1) - 1;
+  console.log(codex[codex_i].pronunciation);
+  console.log(syllabic.text());
+  syllabic.text(codex[codex_i].pronunciation);
+  meaning.text(codex[codex_i].meaning);
+  description_codex.text(codex[codex_i].description);
   if(sidebar.hasClass('invisible_sidebar')) {
     sidebar.toggleClass('invisible_sidebar');
     main_content.toggleClass('with_sidebar');
@@ -138,7 +148,6 @@ var textarea = $('.typo_textarea');
 var typo_open_close = $('.typo_open_close');
 var keyboard = $('.keyboard');
 typo_open_close.on('click', function(ev) {
-  console.log(textarea.parent());
   $(this).toggleClass('invisible_keyboard');
   if(!$(this).hasClass('invisible_keyboard')) {
     keyboard.css({'transform': 'translateY(0vh)', 'visibility': 'visible', 'opacity': '100','display':'block', 'transition': 'all 0.5s ease'});

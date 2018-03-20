@@ -5,7 +5,7 @@
 .game_content
 	@include flex
 	justify-content: space-between
-	width: 100% 
+	width: 100%
 	transition: all 0.25s ease
 	height: calc(100vh - 6.5em)
 	.column
@@ -16,6 +16,7 @@
 			padding: 4em 0 0 7em
 			.column_introduction
 				margin-bottom: .3em
+				font-size: 1.8em
 			.column_main_title
 				margin: 0
 				font-size: 2em
@@ -122,7 +123,7 @@
 					font-size: .9em
 
 
-		
+
 		&.game_column
 			width: 40%
 			height: calc(100vh - 13.5em)
@@ -205,11 +206,11 @@
 						border: 0
 						border: 3px solid red
 						//background-color: rgba(255,0,0,.5)
-				.number_box01, .number_box02, .number_box03, .number_box04 
+				.number_box01, .number_box02, .number_box03, .number_box04
 					border: 3px solid gray
 				.number_box03
 					//margin-left: .5em
-						
+
 
 		&.glyphs_column
 			z-index: 100
@@ -217,7 +218,7 @@
 			//overflow-x: visible
 			//overflow-y: auto
 			width: 23%
-			background-color: #443a34 
+			background-color: #443a34
 			border-left: 2px solid black
 			.arrow
 				display: none
@@ -288,7 +289,7 @@
 						font-weight: 500
 						font-size: .9em
 						padding: .3em
-						background-color: #E56871
+						background-color: #af3434
 					.numbers_elements
 						padding: .4em
 						padding-right: 0
@@ -301,7 +302,7 @@
 
 
 @media (max-width: $breakpoint-desktop)
-	
+
 	.game_content
 		.column
 			&.info_column
@@ -318,7 +319,7 @@
 					.droppable
 						div
 							top: -3.5vw
-	
+
 			&.glyphs_column
 				width: 20%
 				.arrow
@@ -399,7 +400,7 @@
 					.glyph_title
 					.glyph_description
 
-			
+
 			&.game_column
 				width: 60%
 				.game_main_box
@@ -497,7 +498,7 @@
 					.glyph_title
 					.glyph_description
 
-			
+
 			&.game_column
 				margin: 0 5vw
 				.game_main_box
@@ -551,7 +552,7 @@
 					.glyph_title
 					.glyph_description
 
-			
+
 			&.game_column
 				width: 60%
 				padding-top: 4.8em
@@ -612,10 +613,10 @@
 			&.info_column
 				width: 50%
 				padding: 6vh 0 0 3em
-				.column_introduction 
+				.column_introduction
 					display: none
 				.column_main_title
-					font-size: 1.2em 	
+					font-size: 1.2em
 				.column_description
 					margin-bottom: .7em
 				.glyph_slide
@@ -685,8 +686,8 @@
 					span
 						&.fa-2x
 							font-size: 1.3em
-				.glyphs 
-					.principal_sign 
+				.glyphs
+					.principal_sign
 						.principal_elements
 							padding: 0.2em
 							font-size: calc(6.2vw + .5em)
@@ -755,7 +756,7 @@
 								font-size: 26vw
 								top: 16vw
 								left: 1.2vw
-			
+
 					.slide_arrows
 						margin-left: .15em
 						font-size: .7em
@@ -812,8 +813,8 @@
 					span
 						&.fa-2x
 							font-size: 1.3em
-				.glyphs 
-					.principal_sign 
+				.glyphs
+					.principal_sign
 						.principal_elements
 							padding: 0.2em
 							font-size: calc(6.2vw + .5em)
@@ -825,7 +826,3 @@
 						.others_elements
 							padding: 0.2em
 							font-size: calc(4.5vw + .9em)
-
-
-
-
