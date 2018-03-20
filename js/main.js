@@ -131,8 +131,6 @@ part.on('click', function(ev) {
   img_detail.css('background-image', $(this).css('background-image'));
   var position = $(this).attr('class');
   var codex_i = position.substr(position.length - 1) - 1;
-  console.log(codex[codex_i].pronunciation);
-  console.log(syllabic.text());
   syllabic.text(codex[codex_i].pronunciation);
   meaning.text(codex[codex_i].meaning);
   description_codex.text(codex[codex_i].description);
@@ -181,6 +179,5 @@ $('.fa-question-circle').on('click', function(ev) {
 });
 
 $('.remodal').change(function(ev) {
-  console.log("HOLA");
   $('.owl-carousel').trigger('refresh.owl.carousel');
 });
