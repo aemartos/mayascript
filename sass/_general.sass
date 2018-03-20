@@ -43,6 +43,7 @@ main
 		flex-direction: row
 	&.column
 		flex-direction: column
+		align-items: center
 	&.typo
 		padding: 0
 		padding-left: 60px
@@ -70,7 +71,7 @@ main
 			height: auto
 			display: grid
 			//grid-gap: 10px
-			grid-template-columns: 25% 25% 25% 25%
+			grid-template-columns: 20% 20% 20% 20%
 			padding: 20px
 			div
 				//background-color: #b2aeab
@@ -217,13 +218,11 @@ main
 		h1
 			margin: 0
 			font-weight: 700
-		p
-			margin: 0
 		.description
 			font-weight: lighter
 	.main_translator_content
 		background-color: #443a34
-		width: calc(100% - 80px)
+		width: 100%
 		padding: 10px 50px
 		display: flex
 		flex-wrap: wrap
@@ -295,20 +294,71 @@ footer
 	& .owl-item
 		//width: 630px !important
 
-
-@media (max-width: $breakpoint-tabletXL)
+@media (max-width: $breakpoint-desktop)
 	main
-		padding: 0 40px
+		padding: 0
+		.main_content
+			.main_content_title
+				padding: 4em 4em 4em 5em
+				margin: 0
+@media (max-width: $breakpoint-tabletXL) and (orientation: portrait)
+		main.row
+			.main_content
+				flex-direction: column
+				.main_content_title
+					height: 25%
+					width: 100%
+					padding: 4em
+					margin: 0
+				.main_content_info
+					height: 75%
+					width: 100%
+					padding: 4em
+					.grid_item_9, .grid_item_10
+						height: 40vw 	!important
 
-
-@media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet)
+@media (max-width: $breakpoint-tabletXL) and (orientation: landscape)
+		main
+			.main_content
+				.main_content_title
+					padding: 4em 4em 4em 5em
+					margin: 0
+@media (max-width: $breakpoint-tablet)
 	main
 		.main_translator_content
 			.translator_spanish, .translator_mayan
 				width: 45%
+	main.row
+		padding: 0
+		.main_content_title
+			padding: 3em 3em 3em 2em
+			width: 50%
+			margin: 0
+		.main_content_info
+			width: 50%
+			padding: 3em 3em 3em 2em
+			.grid_item_9, .grid_item_10
+				height: 24vw
 
-
-@media (max-width: $breakpoint-phone)
+@media (max-width: $breakpoint-phone) and (orientation: landscape)
+	main.row
+		padding: 0
+		.main_content.column
+			flex-direction: row
+			.main_content_title
+				width: 50%
+				margin: 0
+				padding: 6vh 0 0 3em
+				p
+					font-size: 0.8em
+				h1
+					font-size: 1.2em
+			.main_content_info
+				width: 50%
+				padding: 6vh
+				.grid_item_9, .grid_item_10
+					height: 24vw
+@media (max-width: $breakpoint-phone) and (orientation: portrait)
 	main
 		padding: 0 40px
 		.main_translator_content
@@ -319,7 +369,20 @@ footer
 			margin-bottom: 30px
 			p.description
 				display: none
-				
+	main
+		.main_content.column
+			flex-direction: column
+			.main_content_title
+				width: 100%
+				p
+					font-size: 0.8em
+				h1
+					font-size: 1.2em
+			.main_content_info
+				width: 100%
+				.grid_item_9, .grid_item_10
+					height: 24vw
+
 	header
 		div
 			padding: 0
@@ -333,10 +396,3 @@ footer
 			margin: .95em
 		img
 			margin-top: .3em
-
-
-
-@media (max-width: $breakpoint-small)
-	main
-		.main_translator_content
-			margin: 0

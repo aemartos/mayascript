@@ -48,7 +48,8 @@ main {
   main.row {
     flex-direction: row; }
   main.column {
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
   main.typo {
     padding: 0;
     padding-left: 60px; }
@@ -72,7 +73,7 @@ main {
       width: calc(70% - 40px);
       height: auto;
       display: grid;
-      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-columns: 20% 20% 20% 20%;
       padding: 20px; }
       main .main_content .main_content_info div {
         padding: 20px 0;
@@ -210,13 +211,11 @@ main {
     main .main_transalor_title h1, main .main_content_title h1 {
       margin: 0;
       font-weight: 700; }
-    main .main_transalor_title p, main .main_content_title p {
-      margin: 0; }
     main .main_transalor_title .description, main .main_content_title .description {
       font-weight: lighter; }
   main .main_translator_content {
     background-color: #443a34;
-    width: calc(100% - 80px);
+    width: 100%;
     padding: 10px 50px;
     display: flex;
     flex-wrap: wrap;
@@ -283,13 +282,64 @@ footer {
   width: 100%;
   height: auto; }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
   main {
-    padding: 0 40px; } }
-@media (min-width: 640px) and (max-width: 768px) {
+    padding: 0; }
+    main .main_content .main_content_title {
+      padding: 4em 4em 4em 5em;
+      margin: 0; } }
+@media (max-width: 1024px) and (orientation: portrait) {
+  main.row .main_content {
+    flex-direction: column; }
+    main.row .main_content .main_content_title {
+      height: 25%;
+      width: 100%;
+      padding: 4em;
+      margin: 0; }
+    main.row .main_content .main_content_info {
+      height: 75%;
+      width: 100%;
+      padding: 4em; }
+      main.row .main_content .main_content_info .grid_item_9, main.row .main_content .main_content_info .grid_item_10 {
+        height: 40vw !important; } }
+@media (max-width: 1024px) and (orientation: landscape) {
+  main .main_content .main_content_title {
+    padding: 4em 4em 4em 5em;
+    margin: 0; } }
+@media (max-width: 768px) {
   main .main_translator_content .translator_spanish, main .main_translator_content .translator_mayan {
-    width: 45%; } }
-@media (max-width: 640px) {
+    width: 45%; }
+
+  main.row {
+    padding: 0; }
+    main.row .main_content_title {
+      padding: 3em 3em 3em 2em;
+      width: 50%;
+      margin: 0; }
+    main.row .main_content_info {
+      width: 50%;
+      padding: 3em 3em 3em 2em; }
+      main.row .main_content_info .grid_item_9, main.row .main_content_info .grid_item_10 {
+        height: 24vw; } }
+@media (max-width: 640px) and (orientation: landscape) {
+  main.row {
+    padding: 0; }
+    main.row .main_content.column {
+      flex-direction: row; }
+      main.row .main_content.column .main_content_title {
+        width: 50%;
+        margin: 0;
+        padding: 6vh 0 0 3em; }
+        main.row .main_content.column .main_content_title p {
+          font-size: 0.8em; }
+        main.row .main_content.column .main_content_title h1 {
+          font-size: 1.2em; }
+      main.row .main_content.column .main_content_info {
+        width: 50%;
+        padding: 6vh; }
+        main.row .main_content.column .main_content_info .grid_item_9, main.row .main_content.column .main_content_info .grid_item_10 {
+          height: 24vw; } }
+@media (max-width: 640px) and (orientation: portrait) {
   main {
     padding: 0 40px; }
     main .main_translator_content .translator_spanish, main .main_translator_content .translator_mayan {
@@ -299,6 +349,19 @@ footer {
       margin-bottom: 30px; }
       main .main_transalor_title p.description {
         display: none; }
+
+  main .main_content.column {
+    flex-direction: column; }
+    main .main_content.column .main_content_title {
+      width: 100%; }
+      main .main_content.column .main_content_title p {
+        font-size: 0.8em; }
+      main .main_content.column .main_content_title h1 {
+        font-size: 1.2em; }
+    main .main_content.column .main_content_info {
+      width: 100%; }
+      main .main_content.column .main_content_info .grid_item_9, main .main_content.column .main_content_info .grid_item_10 {
+        height: 24vw; }
 
   header div {
     padding: 0; }
@@ -313,9 +376,6 @@ footer {
       margin: 0.95em; }
     footer img {
       margin-top: 0.3em; } }
-@media (max-width: 360px) {
-  main .main_translator_content {
-    margin: 0; } }
 * {
   -webkit-user-select: none;
   -moz-user-select: none;
