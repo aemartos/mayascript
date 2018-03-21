@@ -46,10 +46,11 @@ $( function() {
               console.log(won)
               if (!won) {
                 $('#modalContent').html(symbol.modalInfo);
-              } else {
+              } /*else {
                 $('#modalContent').html("Has acabado todo!");
                 $('.modalHeader').html("Has acabado todo!")
-              }
+              }*/ //FINAL MODAL END ALL COMPLETED
+              
               setTimeout(function(){
                 inst.open();
                 randomGenerator();

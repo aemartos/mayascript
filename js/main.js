@@ -67,7 +67,7 @@ dropdown.on('click', function(ev) {
 // Function: Adding code to header
 var header = $("header");
 var menu_logo = $("<div class='menu_logo'></div>");
-//var menu_logo_text = $("<p><span class='logo_icon'>d</span><span class='logo_text'>MayaScript</span></p>");
+var menu_logo_text = $("<p><span class='logo_icon'>d</span><span class='logo_text'>Maya_Script</span></p>");
 var menu_opt1 = $("<div class='menu_opt1'></div>");
 var menu_op1_text = $("<p><a href='home.html'>Descifrar</a></p>");
 var menu_opt2 = $("<div class='menu_opt2'></div>");
@@ -80,7 +80,7 @@ var menu_language = $("<div class='menu_language'></div>");
 var menu_language_opts = $("<p>ESP <span class='fa fa-caret-down'></span> </p>");
 
 header.append(menu_logo);
-//menu_logo.append(menu_logo_text);
+menu_logo.append(menu_logo_text);
 header.append(menu_opt1);
 menu_opt1.append(menu_op1_text);
 header.append(menu_opt2);
@@ -97,7 +97,7 @@ menu_language.append(menu_language_opts);
 var footer = $('footer');
 var footer_content = $("<div class='footer_content'></div>");
 var copyright = $("<div class='copyright'></div>");
-var copyright_text = $("<p>Copyright</p>");
+var copyright_text = $("<p><span>MayaScript© 2018 •</span><span class='copy_text'>GitHub</span><a href='https://github.com/aemartos/mayascript' target='_blank'><span class='fa fa-github'></span></a></p>");
 var social_media = $("<div class='social_media'></div>");
 var american_museum = $("<div class='american_museum'></div>");
 var logo_am = $("<a href='http://www.mecd.gob.es/museodeamerica/el-museo.html' target='_blank'><img src='img/museoamerica.png' width='128px' height='23px' alt='logo museo america'></a>");

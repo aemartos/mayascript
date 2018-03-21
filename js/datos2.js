@@ -7,7 +7,7 @@ data_syl_game = [
 	"mayan": "ba-ki",
 	"transcription": "baak",
 	"description": "(1) Inalienablemente poseído, (2) “cautivo” atrapado en guerra",
-	"modalInfo": "sfdfgsdgsdfgsd",
+	"modalInfo": "<div class='remodal-img' style=\"background-image: url('img/modal1.png')\"></div>",
 	"syllables": [
 		"",
 		"",
@@ -22,7 +22,7 @@ data_syl_game = [
 	"mayan": "ko-ha-wa",
 	"transcription": "kohaw / ko’haw",
 	"description": "Particularmente los yelmos de placas de concha provenientes de Teotihuacan",
-	"modalInfo": "sfdfgsdgsdfgsd",
+	"modalInfo": "<div class='remodal-img' style=\"background-image: url('img/modal2.png')\"></div>",
 	"syllables": [
 		"",
 		"ko",
@@ -37,7 +37,7 @@ data_syl_game = [
 	"mayan": "ko-ko-no-ma",
 	"transcription": "ko[h]knom",
 	"description": "Usado en referencias específicas en relación con las deidades patronas de Copan",
-	"modalInfo": "sfdfgsdgsdfgsd",
+	"modalInfo": "<div class='remodal-img' style=\"background-image: url('img/modal3.png')\"></div>",
 	"syllables": [
 		"ko",
 		"ko",
@@ -52,7 +52,7 @@ data_syl_game = [
 	"mayan": "u-k'a-cha-wa",
 	"transcription": "u-kach-aw",
 	"description":"",
-	"modalInfo": "sfdfgsdgsdfgsd",
+	"modalInfo": "<div class='remodal-img' style=\"background-image: url('img/modal4.png')\"></div>",
 	"syllables": [
 		"",
 		"u",
@@ -153,12 +153,12 @@ data_num_game = [
 
 {
 	"index" : 01,
-	"num": 129,
-	"spanish" :"Ciento veintinueve",
+	"num": 160,
+	"spanish" :"Ciento sesenta",
 	"mayan" :"",
 	"description":"",
-	"modalInfo": "sfdfgsdgsdfgsd",
-	"numbers" : ["one","five","four","five"]
+	"modalInfo": "<div class='remodal-img' style=\"background-image: url('img/modal5.png')\"></div>",
+	"numbers" : ["three","five","zero",""]
 },
 
 {
@@ -167,18 +167,18 @@ data_num_game = [
 	"spanish" :"Ciento cuarenta y siete",
 	"mayan" :"",
 	"description":"",
-	"modalInfo": "sfdfgsdgsdfgsd",
+	"modalInfo": "",
 	"numbers" : ["two","five","two","five"]
 },
 
 {
 	"index" : 03,
-	"num": 160,
-	"spanish" :"Ciento sesenta",
+	"num": 129,
+	"spanish" :"Ciento veintinueve",
 	"mayan" :"",
 	"description":"",
-	"modalInfo": "sfdfgsdgsdfgsd",
-	"numbers" : ["three","five","zero",""]
+	"modalInfo": "",
+	"numbers" : ["one","five","four","five"]
 },
 
 {
@@ -187,7 +187,7 @@ data_num_game = [
 	"spanish" :"Ciento ochenta y cuatro",
 	"mayan" :"",
 	"description":"",
-	"modalInfo": "sfdfgsdgsdfgsd",
+	"modalInfo": "",
 	"numbers" : ["four","five","four",""]
 },
 
@@ -197,7 +197,7 @@ data_num_game = [
 	"spanish" :"Doscientos cinco",
 	"mayan" :"",
 	"description":"",
-	"modalInfo": "sfdfgsdgsdfgsd",
+	"modalInfo": "",
 	"numbers" : ["five","five","five",""]
 },
 

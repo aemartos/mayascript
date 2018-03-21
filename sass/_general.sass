@@ -17,6 +17,15 @@ header
 	width: 100%
 	display: flex
 	z-index: 100
+	.logo_icon
+		@include mayascript
+		font-size: 2em
+		line-height: 1em
+		display: none
+	.logo_text
+		font-weight: 900
+		font-size: 1.2em
+		line-height: .9em
 	div[class*="menu_opt"]:hover
 		background-color: #af3434
 		cursor: pointer
@@ -47,6 +56,7 @@ main
 	&.typo
 		padding: 0
 	& .title_p
+		margin-top: 0
 		font-size: 1.8em !important
 
 	.main_content
@@ -66,6 +76,8 @@ main
 				&:hover
 					color: #ed4747
 					cursor: pointer
+			.codice_page
+				width: 85%
 
 		.main_content_info
 			//background-color: #443a34
@@ -83,37 +95,38 @@ main
 				background-size: 65%
 				background-size: contain
 				align-items: center
-
-			.grid_item_1
-				background-image: url('../img/glif1.png')
-			.grid_item_2
-				background-image: url('../img/glif2.png')
-			.grid_item_3
-				background-image: url('../img/glif3.png')
-			.grid_item_4
-				background-image: url('../img/glif4.png')
-			.grid_item_5
-				background-image: url('../img/glif5.png')
-			.grid_item_6
-				background-image: url('../img/glif6.png')
-			.grid_item_7
-				background-image: url('../img/glif7.png')
-			.grid_item_8
-				background-image: url('../img/glif8.png')
-			.grid_item_9
-				grid-row-start: 3
-				grid-row-end: 5
-				grid-column-start: 1
-				grid-column-end: 3
-				background-image: url('../img/indig1.png')
-				background-size: contain
-			.grid_item_10
-				grid-row-start: 3
-				grid-row-end: 5
-				grid-column-start: 3
-				grid-column-end: 5
-				background-image: url('../img/indig2.png')
-				background-size: contain
+			.grid_item
+				cursor: pointer
+				&.grid_item_1
+					background-image: url('../img/glif1.png')
+				&.grid_item_2
+					background-image: url('../img/glif2.png')
+				&.grid_item_3
+					background-image: url('../img/glif3.png')
+				&.grid_item_4
+					background-image: url('../img/glif4.png')
+				&.grid_item_5
+					background-image: url('../img/glif5.png')
+				&.grid_item_6
+					background-image: url('../img/glif6.png')
+				&.grid_item_7
+					background-image: url('../img/glif7.png')
+				&.grid_item_8
+					background-image: url('../img/glif8.png')
+				&.grid_item_9
+					grid-row-start: 3
+					grid-row-end: 5
+					grid-column-start: 1
+					grid-column-end: 3
+					background-image: url('../img/indig1.png')
+					background-size: contain
+				&.grid_item_10
+					grid-row-start: 3
+					grid-row-end: 5
+					grid-column-start: 3
+					grid-column-end: 5
+					background-image: url('../img/indig2.png')
+					background-size: contain
 
 		.main_content_info_typo
 			width: calc(75% - 60px)
@@ -166,6 +179,7 @@ main
 		top: 50%
 		right: 10px
 		transition: all 0.25s ease
+		//background-color:  #443a34
 		&:hover
 			cursor: pointer
 		&.with_sidebar
@@ -225,7 +239,7 @@ main
 			font-weight: lighter
 	.main_translator_content
 		background-color: #443a34
-		width: 100%
+		width: 88%
 		padding: 10px 50px
 		display: flex
 		flex-wrap: wrap
@@ -282,6 +296,16 @@ footer
 		align-items: center
 		width: calc(100% - 120px)
 		margin: 0 auto
+		.copyright
+			.copy_text
+				margin: 0 .5em
+			.fa-github
+				color: black
+				font-size: 1.2em
+				line-height: .8em
+				//margin: 0 .3em
+				&:hover
+					opacity: .5
 		div
 			width: calc(100%/3)
 		div.american_museum
@@ -303,9 +327,11 @@ footer
 			padding: 4em 4em 4em 5em
 			.main_transalor_title
 				padding: 0
+			.main_translator_content
+				width: 100%
 		.main_content
 			.main_content_title
-				padding: 8em 0em 4em 5em
+				padding: 5em 0em 4em 5em
 				margin: 0
 				p
 					margin-top: 0
@@ -321,6 +347,8 @@ footer
 					width: 100%
 					padding: 4em
 					margin: 0
+					.codice_page
+						display: none
 					& .fa-question-circle
 						position: absolute
 						bottom: 0.2em
@@ -409,10 +437,27 @@ footer
 			p
 				font-size: .8em
 				margin: .7em
+		.logo_icon
+			display: block
+			font-size: 2em
+			line-height: .6em
+		.logo_text
+			display: none
 	footer
 		height: 3em
 		font-size: .7em
 		p
 			margin: .95em
 		img
-			margin-top: .3em
+			//margin-top: .3em
+			width: 9em
+			height: auto
+		.footer_content
+			padding: 0 1em 
+			width: 100%
+			.copyright
+				width: 100%
+				.copy_text
+					display: none
+				.fa-github
+					margin-left: .3em
