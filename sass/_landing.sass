@@ -30,3 +30,26 @@
           color: black
           background-color: white
           @include hover-scale
+
+          
+#fullscreen_button
+  position: absolute
+  margin: 5em
+  cursor: pointer
+  @include transition (all 0.2s ease)
+  &:hover
+    opacity: .5
+    @include transition (all 0.2s ease)
+
+
+*:-webkit-full-screen 
+  width: 100%
+  height: 100%
+
+*:-ms-fullscreen, *:fullscreen 
+  position: fixed
+  margin: 0
+  left: 0px
+  top: 0px
+  width: 100%
+  height: 100%

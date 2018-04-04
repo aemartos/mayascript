@@ -24,6 +24,7 @@ html {
   height: 100vh; }
 
 body {
+  height: 100%;
   background-color: #191005;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -1183,5 +1184,34 @@ footer {
         -moz-transition: all 0.2s ease;
         -ms-transition: all 0.2s ease;
         -o-transition: all 0.2s ease; }
+
+#fullscreen_button {
+  position: absolute;
+  margin: 5em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease; }
+  #fullscreen_button:hover {
+    opacity: 0.5;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease; }
+
+*:-webkit-full-screen {
+  width: 100%;
+  height: 100%; }
+
+*:-ms-fullscreen, *:fullscreen {
+  position: fixed;
+  margin: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%; }
 
 /*# sourceMappingURL=styles.css.map */
