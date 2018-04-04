@@ -61,7 +61,7 @@ data_syl_game = [
 		"wa"
 		]
 },
-{
+/*{
 	"index": 05,
 	"spanish": "No existe traducción al español",
 	"mayan": "ye-ma-la",
@@ -144,7 +144,7 @@ data_syl_game = [
 	"description": "",
 	"modalInfo": "sfdfgsdgsdfgsd",
 	"syllables": ["", "chaa", "ho", "ma_o", ""]
-},
+},*/
 
 ];
 
@@ -161,7 +161,7 @@ data_num_game = [
 	"numbers" : ["three","five","zero",""]
 },
 
-{
+/*{
 	"index" : 02,
 	"num": 147,
 	"spanish" :"Ciento cuarenta y siete",
@@ -199,7 +199,7 @@ data_num_game = [
 	"description":"",
 	"modalInfo": "",
 	"numbers" : ["five","five","five",""]
-},
+},*/
 
 ];
 

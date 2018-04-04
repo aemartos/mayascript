@@ -1,3 +1,23 @@
+
+
+//FullScreen
+
+
+
+
+
+//Reload
+
+setInterval(function() {
+  refresh()
+}, 5*60000);
+
+function refresh() {
+  window.location.reload(true);
+  window.location.href = "index.html";
+}
+
+
 // Variables
 var isFirstTime;
 var mayanWords = [];

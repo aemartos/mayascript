@@ -4,6 +4,21 @@
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/mayascript/MayaFont-Regular.eot"), url("../fonts/mayascript/MayaFont-Regular.otf") format("opentype"), url("../fonts/mayascript/MayaFont-Regular.woff2") format("woff2"), url("../fonts/mayascript/MayaFont-Regular.woff") format("woff"), url("../fonts/mayascript/MayaFont-Regular.ttf") format("truetype"); }
+ul li {
+  list-style-type: none; }
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
 html {
   box-sizing: border-box;
   height: 100vh; }
@@ -434,18 +449,6 @@ footer {
           display: none; }
         footer .footer_content .copyright .fa-github {
           margin-left: 0.3em; } }
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box; }
-
 .game_content {
   display: flex;
   flex-flow: row nowrap;
@@ -547,7 +550,7 @@ footer {
         justify-content: space-around;
         color: #DBA94C;
         cursor: pointer;
-        margin-left: -0.6vw; }
+        margin-left: -1.5vw; }
         .game_content .column.info_column .glyph_slide .slide_arrows #arrow_right, .game_content .column.info_column .glyph_slide .slide_arrows #arrow_left {
           transition: all 0.2s ease;
           -webkit-transition: all 0.2s ease;
@@ -774,7 +777,7 @@ footer {
     .remodal.remodal_game #modalContent .remodal-img {
       height: 29vw;
       background-repeat: no-repeat;
-      background-size: cover; }
+      background-size: 100% 100%; }
 
 @media (max-width: 1366px) {
   .game_content .column.info_column {
