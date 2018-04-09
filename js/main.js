@@ -56,13 +56,29 @@ if (mobileAndTabletcheck()){
 
 //Reload
 
+var userInteract = false;
+
+document.addEventListener('mousemove', function(e){
+  userInteract = true;
+});
+
+document.addEventListener('keydown', function(e){
+  userInteract = true;
+});
+
 setInterval(function() {
-  refresh()
-}, 5*60000);
+  let loc = (window.location.href.split('/'));
+  loc = loc[loc.length -1];
+  if (!userInteract && loc !== 'landing.html') {
+    refresh();
+  }
+  userInteract = false;
+
+}, 5 * 60000);
 
 function refresh() {
   window.location.reload(true);
-  window.location.href = "index.html";
+  window.location.href = "landing.html";
 }
 
 
